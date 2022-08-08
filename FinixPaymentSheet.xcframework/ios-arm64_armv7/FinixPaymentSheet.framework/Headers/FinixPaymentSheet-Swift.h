@@ -240,13 +240,14 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 @end
 
 
+
 @class UITextField;
 
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 
 
@@ -506,13 +507,14 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 @end
 
 
+
 @class UITextField;
 
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
+- (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 
 
