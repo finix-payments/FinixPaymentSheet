@@ -241,6 +241,7 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 
 
 
+
 @class UITextField;
 
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
@@ -508,6 +509,7 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 
 
 
+
 @class UITextField;
 
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
@@ -772,6 +774,7 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
+
 
 
 

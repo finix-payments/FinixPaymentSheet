@@ -1,7 +1,27 @@
 {
   "images" : [
     {
+      "filename" : "FinixLogo-1.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
       "filename" : "FinixLogo.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "FinixLogo-dark.png",
       "idiom" : "universal"
     }
   ],
