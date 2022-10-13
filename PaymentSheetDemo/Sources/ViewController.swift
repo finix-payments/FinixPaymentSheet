@@ -64,6 +64,17 @@ extension ViewController: PaymentActionDelegate {
 
         let resultController = ResultViewController()
         resultController.result = .success(instrument)
+        debugPrint("""
+        Got a token response with:
+                id: \(instrument.id)
+                fingerprint: \(instrument.fingerprint)
+                created: \(instrument.created)
+                updated: \(instrument.updated)
+                instrument: \(instrument.instrument)
+                expires: \(instrument.expires)
+                isoCurrency: \(instrument.isoCurrency)
+        """)
+
         paymentController.navigationController?.pushViewController(resultController, animated: true)
     }
 
@@ -76,6 +87,9 @@ extension ViewController: PaymentActionDelegate {
         debugPrint("failed to process with error: \(error)")
 
         let resultController = ResultViewController()
+        if let error = error as? FinixError {
+            debugPrint("FinixError with \(error.message), code: \(error.code)")
+        }
         resultController.result = .error(error)
         paymentController.navigationController?.pushViewController(resultController, animated: true)
     }
