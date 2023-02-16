@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		GJRb0ro0Cfx0EFcsLqdDjI6W3PI=
+		A5WanveJ6aNyWHgCZyNgpA5gx2E=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YJyRl/AaCmmJGXZi/FrfFTvxdWk=
+		i2iSD7cJQZkxQLAsEnqMDHGHSpw=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6LGOFwdsJ59qASgzvQGxdPjv40Y=
+		0QXwoMjaOgfhbe8+eH1ZGueqpPE=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EAMYKId9T9TrFJYaXx81S4ey9bY=
+		/9d6XhjUMrObwhRgtTNuXTvUVcc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -92,11 +92,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YJyRl/AaCmmJGXZi/FrfFTvxdWk=
+			i2iSD7cJQZkxQLAsEnqMDHGHSpw=
 			</data>
 			<key>hash2</key>
 			<data>
-			BJkwopKD94XdUCY0BQbWq4fCxINhYEknKxYMtz1S/1s=
+			bFnV6o82dFCIMA9YM7wzf2jYHcNXGL3YbvoqcdmwNpo=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -125,11 +125,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6LGOFwdsJ59qASgzvQGxdPjv40Y=
+			0QXwoMjaOgfhbe8+eH1ZGueqpPE=
 			</data>
 			<key>hash2</key>
 			<data>
-			0Njeoa8oca7HJe0f4MryqUtPC7hzreN/LjyLGNZgE6c=
+			VZKsWSc+0BVEEW0XayvaZy+HekY19aSBRxe0r7YewcM=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -158,11 +158,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EAMYKId9T9TrFJYaXx81S4ey9bY=
+			/9d6XhjUMrObwhRgtTNuXTvUVcc=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGcUoBde7h2aU2COyu4+e+aZaXJUIiMnGxIwJhhY5Sk=
+			Vwls7/x8Mf8gXfpeJU7Cqz7Y9sZbLb4udASkozEM2IQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
