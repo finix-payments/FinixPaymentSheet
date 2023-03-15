@@ -67,9 +67,19 @@ public enum ISOCurrency : Swift.String, Swift.Decodable {
     get
   }
 }
+public enum FinixAPIEndpoint {
+  case Sandbox
+  case Live
+  public static func == (a: FinixPaymentSheet.FinixAPIEndpoint, b: FinixPaymentSheet.FinixAPIEndpoint) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct FinixCredentials {
   public let applicationId: Swift.String
-  public init(applicationId: Swift.String)
+  public let environment: FinixPaymentSheet.FinixAPIEndpoint
+  public init(applicationId: Swift.String, environment: FinixPaymentSheet.FinixAPIEndpoint)
 }
 public struct FinixError : Swift.Error {
   public let code: FinixPaymentSheet.FinixError.Code
@@ -156,3 +166,5 @@ extension FinixPaymentSheet.PaymentInstrumentType : Swift.RawRepresentable {}
 extension FinixPaymentSheet.ISOCurrency : Swift.Equatable {}
 extension FinixPaymentSheet.ISOCurrency : Swift.Hashable {}
 extension FinixPaymentSheet.ISOCurrency : Swift.RawRepresentable {}
+extension FinixPaymentSheet.FinixAPIEndpoint : Swift.Equatable {}
+extension FinixPaymentSheet.FinixAPIEndpoint : Swift.Hashable {}

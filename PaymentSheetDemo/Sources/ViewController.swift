@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var paymentSDK: PaymentAction!
 
     override func viewDidLoad() {
-        let credentials = FinixCredentials(applicationId: APPLICATION_ID)
+        let credentials = FinixCredentials(applicationId: APPLICATION_ID, environment: .Sandbox)
         paymentSDK = .init(credentials: credentials)
 
         // Provide your own branding
