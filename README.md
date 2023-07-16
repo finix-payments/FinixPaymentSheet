@@ -8,7 +8,7 @@ It provides a presenter or you can present the PaymentInputController yourself.
 ## Requirements
 
 This requires:
-  * iOS 10.0
+  * iOS 11.0
   * Xcode 13 to use the XCFramework
 
 ## Usage
