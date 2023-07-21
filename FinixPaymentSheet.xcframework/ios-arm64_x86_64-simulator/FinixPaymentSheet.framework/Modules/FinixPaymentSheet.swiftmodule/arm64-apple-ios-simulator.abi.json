@@ -3424,7 +3424,7 @@
           {
             "kind": "Function",
             "name": "paymentSheet",
-            "printedName": "paymentSheet(style:showCancelItem:card:showCountry:address:)",
+            "printedName": "paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -3437,6 +3437,13 @@
                 "name": "Style",
                 "printedName": "FinixPaymentSheet.PaymentInputController.Style",
                 "usr": "s:17FinixPaymentSheet0B15InputControllerC5StyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -3484,8 +3491,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:17FinixPaymentSheet0B6ActionC07paymentC05style14showCancelItem4card0G7Country7addressAA0B15InputControllerCAK5StyleO_SbAA4CardVSgSbAA15AddressProtocol_pSgtF",
-            "mangledName": "$s17FinixPaymentSheet0B6ActionC07paymentC05style14showCancelItem4card0G7Country7addressAA0B15InputControllerCAK5StyleO_SbAA4CardVSgSbAA15AddressProtocol_pSgtF",
+            "usr": "s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF",
+            "mangledName": "$s17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF",
             "moduleName": "FinixPaymentSheet",
             "declAttributes": [
               "RawDocComment"
@@ -4716,7 +4723,7 @@
               {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(title:branding:buttonTitle:showsCancelButton:)",
+                "printedName": "init(title:branding:buttonTitle:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -4749,17 +4756,11 @@
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:17FinixPaymentSheet0B15InputControllerC13ConfigurationV5title8branding11buttonTitle17showsCancelButtonAESSSg_AC8BrandingVSSSbtcfc",
-                "mangledName": "$s17FinixPaymentSheet0B15InputControllerC13ConfigurationV5title8branding11buttonTitle17showsCancelButtonAESSSg_AC8BrandingVSSSbtcfc",
+                "usr": "s:17FinixPaymentSheet0B15InputControllerC13ConfigurationV5title8branding11buttonTitleAESSSg_AC8BrandingVSStcfc",
+                "mangledName": "$s17FinixPaymentSheet0B15InputControllerC13ConfigurationV5title8branding11buttonTitleAESSSg_AC8BrandingVSStcfc",
                 "moduleName": "FinixPaymentSheet",
                 "declAttributes": [
                   "AccessControl"
@@ -4908,50 +4909,6 @@
                     "declKind": "Accessor",
                     "usr": "s:17FinixPaymentSheet0B15InputControllerC13ConfigurationV11buttonTitleSSvg",
                     "mangledName": "$s17FinixPaymentSheet0B15InputControllerC13ConfigurationV11buttonTitleSSvg",
-                    "moduleName": "FinixPaymentSheet",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "showsCancelButton",
-                "printedName": "showsCancelButton",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:17FinixPaymentSheet0B15InputControllerC13ConfigurationV17showsCancelButtonSbvp",
-                "mangledName": "$s17FinixPaymentSheet0B15InputControllerC13ConfigurationV17showsCancelButtonSbvp",
-                "moduleName": "FinixPaymentSheet",
-                "declAttributes": [
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Bool",
-                        "printedName": "Swift.Bool",
-                        "usr": "s:Sb"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:17FinixPaymentSheet0B15InputControllerC13ConfigurationV17showsCancelButtonSbvg",
-                    "mangledName": "$s17FinixPaymentSheet0B15InputControllerC13ConfigurationV17showsCancelButtonSbvg",
                     "moduleName": "FinixPaymentSheet",
                     "implicit": true,
                     "accessorKind": "get"
@@ -8410,28 +8367,35 @@
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentAction\/PaymentAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 860,
+      "offset": 1240,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentAction\/PaymentAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 999,
+      "offset": 1327,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentAction\/PaymentAction.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1466,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentAction\/PaymentAction.swift",
       "kind": "BooleanLiteral",
-      "offset": 1740,
+      "offset": 2428,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentAction\/PaymentAction.swift",
       "kind": "FloatLiteral",
-      "offset": 2033,
+      "offset": 2721,
       "length": 4,
       "value": "30.0"
     },
@@ -8473,16 +8437,9 @@
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController+Configuration.swift",
       "kind": "StringLiteral",
-      "offset": 4052,
+      "offset": 3929,
       "length": 10,
       "value": "\"Tokenize\""
-    },
-    {
-      "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController+Configuration.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4083,
-      "length": 4,
-      "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
@@ -8501,119 +8458,119 @@
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2340,
-      "length": 5,
-      "value": "false"
+      "offset": 2342,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2753,
+      "offset": 2392,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2858,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "Dictionary",
-      "offset": 3547,
+      "offset": 3743,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3843,
+      "offset": 4039,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 3956,
+      "offset": 4152,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 4150,
+      "offset": 4346,
       "length": 2,
       "value": "76"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4195,
+      "offset": 4391,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 4296,
+      "offset": 4492,
       "length": 39,
       "value": "\"init(coder:) has not been implemented\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5292,
+      "offset": 5541,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 7725,
+      "offset": 7974,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9022,
+      "offset": 9271,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 9819,
+      "offset": 10068,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10997,
+      "offset": 11246,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11256,
+      "offset": 11505,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 11876,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12137,
+      "offset": 12317,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 12415,
+      "offset": 12595,
       "length": 15,
       "value": "\"cancel tapped\""
     },
@@ -8634,518 +8591,518 @@
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 12783,
+      "offset": 12963,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12818,
+      "offset": 12998,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12897,
+      "offset": 13077,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 12938,
+      "offset": 13118,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13009,
+      "offset": 13189,
       "length": 2,
       "value": "99"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13033,
+      "offset": 13213,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 13602,
+      "offset": 13782,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 13779,
+      "offset": 13959,
       "length": 43,
       "value": "\"row = \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 13792,
+      "offset": 13972,
       "length": 1,
       "value": "\", input field = \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 13821,
+      "offset": 14001,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14248,
+      "offset": 14428,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 14259,
+      "offset": 14439,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 14338,
+      "offset": 14518,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14396,
+      "offset": 14576,
       "length": 69,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14421,
+      "offset": 14601,
       "length": 1,
       "value": "\": failed to validate: \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14461,
+      "offset": 14641,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14464,
+      "offset": 14644,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 14979,
+      "offset": 15159,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 14990,
+      "offset": 15170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15069,
+      "offset": 15249,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15127,
+      "offset": 15307,
       "length": 69,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15152,
+      "offset": 15332,
       "length": 1,
       "value": "\": failed to validate: \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15192,
+      "offset": 15372,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15195,
+      "offset": 15375,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15582,
+      "offset": 15762,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15593,
+      "offset": 15773,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 15673,
+      "offset": 15853,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15731,
+      "offset": 15911,
       "length": 71,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15757,
+      "offset": 15937,
       "length": 1,
       "value": "\": failed to validate: \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15798,
+      "offset": 15978,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 15801,
+      "offset": 15981,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 16270,
+      "offset": 16512,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 16358,
+      "offset": 16608,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 16400,
+      "offset": 16658,
       "length": 36,
       "value": "\"invalid hidden country: \""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 16435,
+      "offset": 16693,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 16840,
+      "offset": 17112,
       "length": 15,
       "value": "\"button tapped\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16898,
+      "offset": 17170,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 16929,
+      "offset": 17201,
       "length": 19,
       "value": "\"validation failed\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 17172,
+      "offset": 17444,
       "length": 25,
       "value": "\"Invalid Expiration Date\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 17457,
+      "offset": 17729,
       "length": 25,
       "value": "\"Invalid Expiration Date\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 18078,
+      "offset": 18350,
       "length": 27,
       "value": "\"No Response and no error.\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18757,
+      "offset": 19029,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 18925,
+      "offset": 19197,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19163,
+      "offset": 19435,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 19264,
+      "offset": 19536,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 19276,
+      "offset": 19548,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19332,
+      "offset": 19604,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19538,
+      "offset": 19810,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19715,
+      "offset": 19987,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 19745,
+      "offset": 20017,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "IntegerLiteral",
-      "offset": 19977,
+      "offset": 20249,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 20584,
+      "offset": 20856,
       "length": 19,
       "value": "\"expect singleCell\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 20842,
+      "offset": 21114,
       "length": 22,
       "value": "\"expected doubleCell!\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 21246,
+      "offset": 21518,
       "length": 23,
       "value": "\"unexpected inputField\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 22011,
+      "offset": 22283,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 22336,
+      "offset": 22608,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 22433,
+      "offset": 22705,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 22523,
+      "offset": 22795,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 22902,
+      "offset": 23174,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23531,
+      "offset": 23803,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23562,
+      "offset": 23834,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 23727,
+      "offset": 23999,
       "length": 27,
       "value": "\"textFieldShouldEndEditing\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23930,
+      "offset": 24202,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 24046,
+      "offset": 24318,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 24223,
+      "offset": 24495,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 24850,
+      "offset": 25122,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 24911,
+      "offset": 25183,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 25024,
+      "offset": 25296,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 25103,
+      "offset": 25375,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 25244,
+      "offset": 25516,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 25317,
+      "offset": 25589,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "StringLiteral",
-      "offset": 25398,
+      "offset": 25670,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 26080,
+      "offset": 26352,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jack\/work\/Finix\/PaymentSheet\/Sources\/PaymentInputController\/PaymentInputController.swift",
       "kind": "BooleanLiteral",
-      "offset": 26305,
+      "offset": 26577,
       "length": 4,
       "value": "true"
     },

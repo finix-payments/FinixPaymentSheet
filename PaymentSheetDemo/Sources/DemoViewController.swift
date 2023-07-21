@@ -66,13 +66,14 @@ class DemoViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DemoSwitchCell.Identifier) as? DemoSwitchCell else {
                 fatalError("Expected DemoCell")
             }
+            cell.selectionStyle = .none
             let demoSwitch = DemoSwitch.allCases[indexPath.row]
             switch demoSwitch {
             case .showCountry:
                 cell.switchControl.isOn = showCountry
                 cell.switchControl.addTarget(self, action: #selector(showCountryValueChanged(_:)), for: .valueChanged)
-            case .showCancel:
-                cell.switchControl.isOn = showCancel
+            case .showCancelButton:
+                cell.switchControl.isOn = showCancelButton
                 cell.switchControl.addTarget(self, action: #selector(showCancelButtonValueChanged(_:)), for: .valueChanged)
             }
             cell.textLabel?.text = demoSwitch.title
@@ -117,7 +118,7 @@ class DemoViewController: UITableViewController {
 
     // configuration
     private var showCountry: Bool = false
-    private var showCancel: Bool = false
+    private var showCancelButton: Bool = false
 }
 
 enum DemoCellSection: Int, CaseIterable {
@@ -159,11 +160,11 @@ enum RowStyle: Int, CaseIterable {
 
 enum DemoSwitch: Int, CaseIterable {
     case showCountry
-    case showCancel
+    case showCancelButton
 
     var title: String {
         switch self {
-        case .showCancel:
+        case .showCancelButton:
             return "Show Cancel Button"
         case .showCountry:
             return "Show Country"
@@ -176,18 +177,30 @@ enum DemoSwitch: Int, CaseIterable {
 extension DemoViewController {
     private func setupPaymentSDK() {
         // Set up configuration
-        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize", showsCancelButton: showCancel)
+        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize")
         // Designate a delegate
         paymentSDK.delegate = self
     }
 
+    // present a payment sheet modally
     private func modalPresentSheet(style: PaymentInputController.Style) {
-        let paymentController = paymentSDK.paymentSheet(style: style, showCountry: showCountry)
+        // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
+        let paymentController = paymentSDK.paymentSheet(style: style,
+                                                        showCancelButton: showCancelButton,
+                                                        showCancelItem: true,
+                                                        showCountry: showCountry)
+        paymentController.delegate = self
+        // present the configured payment controller
         paymentSDK.present(from: self, paymentSheet: paymentController)
     }
 
+    // push a payment sheet onto the parent navigation controller
     private func navigationPushSheet(style: PaymentInputController.Style) {
-        let paymentSheet = paymentSDK.paymentSheet(style: style, showCancelItem: false, showCountry: showCountry)
+        let paymentSheet = paymentSDK.paymentSheet(style: style,
+                                                   showCancelButton: showCancelButton,
+                                                   showCancelItem: false,
+                                                   showCountry: showCountry)
+        paymentSheet.delegate = self
         navigationController?.pushViewController(paymentSheet, animated: true)
     }
 }
@@ -240,7 +253,7 @@ extension DemoViewController {
 
     @IBAction
     func showCancelButtonValueChanged(_ switchView: UISwitch) {
-        showCancel = switchView.isOn
+        showCancelButton = switchView.isOn
     }
 }
 
