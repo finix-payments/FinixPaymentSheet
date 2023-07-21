@@ -16,7 +16,7 @@ This requires:
 You can install this via CocoaPods with the following in `Podfile`:
 
 ```
-  pod 'FinixPaymentSheet', :git => 'git@github.com:Finix-Payments/FinixPaymentSheet.git', :tag => 'v0.9.9'
+  pod 'FinixPaymentSheet', :git => 'git@github.com:Finix-Payments/FinixPaymentSheet.git', :tag => 'v0.9.9.1'
 ```
    
 Alternatively you can link against the provided `FinixPaymentShee.xcframework` directly by adding to your project.
