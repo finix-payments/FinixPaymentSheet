@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   'This podspec provides an xcframework for FinixPaymentSheet'
 
   s.name                           = 'FinixPaymentSheet'
-  s.version                        = '0.9.9.1'
+  s.version                        = '1.0.0'
   s.summary                        = 'FinixPaymentSheet provides a convenient card tokenization UI.'
   s.license                        = { :type => 'Apache License 2.0', :file => 'LICENSE' }
   s.homepage                       = 'https://www.finix.com/docs/guides/payments/'

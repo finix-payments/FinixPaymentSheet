@@ -34,13 +34,24 @@ class DemoViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        let credentials = FinixCredentials(applicationId: APPLICATION_ID, environment: .Sandbox)
-        paymentSDK = .init(credentials: credentials)
+        setupPaymentSDK()
+
         navigationItem.title = "Card Payment Sheet Demo"
 
         super.viewDidLoad()
         tableView.register(DemoCell.self, forCellReuseIdentifier: DemoCell.Identifier)
         tableView.register(DemoSwitchCell.self, forCellReuseIdentifier: DemoSwitchCell.Identifier)
+    }
+
+    // set up PaymentSDK
+    private func setupPaymentSDK() {
+        let credentials = FinixCredentials(applicationId: APPLICATION_ID, environment: .Sandbox)
+        paymentSDK = .init(credentials: credentials)
+
+        // Set up configuration
+        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize")
+        // Designate a delegate
+        paymentSDK.delegate = self
     }
 
     override func numberOfSections(in _: UITableView) -> Int {
@@ -51,6 +62,8 @@ class DemoViewController: UITableViewController {
         switch DemoCellSection.allCases[section] {
         case .modal, .push:
             return RowStyle.allCases.count
+        case .bank:
+            return BankStyle.allCases.count
         case .configuration:
             return DemoSwitch.allCases.count
         }
@@ -84,6 +97,12 @@ class DemoViewController: UITableViewController {
             }
             cell.textLabel?.text = RowStyle.allCases[indexPath.row].title
             return cell
+        case .bank:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DemoCell.Identifier) as? DemoCell else {
+                fatalError("Expected DemoCell")
+            }
+            cell.textLabel?.text = "Bank"
+            return cell
         }
     }
 
@@ -103,9 +122,6 @@ class DemoViewController: UITableViewController {
             style = .minimal
         }
 
-        // setup here for `showsCancel`
-        setupPaymentSDK()
-
         switch DemoCellSection.allCases[indexPath.section] {
         case .modal:
             modalPresentSheet(style: style)
@@ -113,6 +129,8 @@ class DemoViewController: UITableViewController {
             navigationPushSheet(style: style)
         case .configuration:
             return
+        case .bank:
+            modalPresentBankSheet()
         }
     }
 
@@ -125,6 +143,7 @@ enum DemoCellSection: Int, CaseIterable {
     case modal
     case push
     case configuration
+    case bank
 
     var title: String {
         switch self {
@@ -134,6 +153,8 @@ enum DemoCellSection: Int, CaseIterable {
             return "Push Presentation"
         case .configuration:
             return "Configuration"
+        case .bank:
+            return "Bank Modal Presentation"
         }
     }
 }
@@ -158,6 +179,17 @@ enum RowStyle: Int, CaseIterable {
     }
 }
 
+enum BankStyle: Int, CaseIterable {
+    case basic
+
+    var title: String {
+        switch self {
+        case .basic:
+            return "Bank"
+        }
+    }
+}
+
 enum DemoSwitch: Int, CaseIterable {
     case showCountry
     case showCancelButton
@@ -175,13 +207,6 @@ enum DemoSwitch: Int, CaseIterable {
 // MARK: PaymentSheet presentation
 
 extension DemoViewController {
-    private func setupPaymentSDK() {
-        // Set up configuration
-        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize")
-        // Designate a delegate
-        paymentSDK.delegate = self
-    }
-
     // present a payment sheet modally
     private func modalPresentSheet(style: PaymentInputController.Style) {
         // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
@@ -202,6 +227,20 @@ extension DemoViewController {
                                                    showCountry: showCountry)
         paymentSheet.delegate = self
         navigationController?.pushViewController(paymentSheet, animated: true)
+    }
+}
+
+// MARK: Bank PaymentSheet presentation
+
+extension DemoViewController {
+    private func modalPresentBankSheet() {
+        // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
+        // optionally specify the default bank account type
+        let paymentController = paymentSDK.bankPaymentSheet(showCancelButton: showCancelButton,
+                                                            showCancelItem: true)
+        paymentController.delegate = self
+        // present the configured payment controller
+        paymentSDK.present(from: self, paymentSheet: paymentController)
     }
 }
 
