@@ -1,0 +1,537 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 45,
+      "symbol": "TokenResponse.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 46,
+      "symbol": "TokenResponse.fingerprint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 47,
+      "symbol": "TokenResponse.created",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 48,
+      "symbol": "TokenResponse.updated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 49,
+      "symbol": "TokenResponse.instrument",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 50,
+      "symbol": "TokenResponse.expires",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 51,
+      "symbol": "TokenResponse.isoCurrency",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 66,
+      "symbol": "PaymentInstrumentType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 67,
+      "symbol": "PaymentInstrumentType.card",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 68,
+      "symbol": "PaymentInstrumentType.bank",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 71,
+      "symbol": "ISOCurrency",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPI.swift",
+      "line": 72,
+      "symbol": "ISOCurrency.USD",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPIEndpoint.swift",
+      "line": 12,
+      "symbol": "FinixAPIEndpoint.Sandbox",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/API/FinixAPIEndpoint.swift",
+      "line": 13,
+      "symbol": "FinixAPIEndpoint.Live",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/CountryController/CountrySelectionController.swift",
+      "line": 105,
+      "symbol": "RandomAccessCollection.bisectToFirstIndex(where:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 10,
+      "symbol": "AddressProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 11,
+      "symbol": "AddressProtocol.line1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 12,
+      "symbol": "AddressProtocol.line2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 13,
+      "symbol": "AddressProtocol.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 14,
+      "symbol": "AddressProtocol.region",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 15,
+      "symbol": "AddressProtocol.postalCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 16,
+      "symbol": "AddressProtocol.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 21,
+      "symbol": "Address",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 22,
+      "symbol": "Address.init(line1:line2:city:region:postalCode:country:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 31,
+      "symbol": "Address.line1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 32,
+      "symbol": "Address.line2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 33,
+      "symbol": "Address.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 34,
+      "symbol": "Address.region",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 35,
+      "symbol": "Address.postalCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 36,
+      "symbol": "Address.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 38,
+      "symbol": "Address.init(address:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Address.swift",
+      "line": 48,
+      "symbol": "Address",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 24,
+      "symbol": "Card",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 28,
+      "symbol": "Card.init(name:cardNumber:expiration:securityCode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 41,
+      "symbol": "Expiration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 42,
+      "symbol": "Expiration.init(month:year:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 57,
+      "symbol": "BasicCard",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 58,
+      "symbol": "PartialCard",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 59,
+      "symbol": "CompleteCard",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Model/Card.swift",
+      "line": 62,
+      "symbol": "MinimalCard",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/FinixCredentials.swift",
+      "line": 12,
+      "symbol": "FinixCredentials.applicationId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/FinixCredentials.swift",
+      "line": 13,
+      "symbol": "FinixCredentials.environment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/FinixCredentials.swift",
+      "line": 15,
+      "symbol": "FinixCredentials.init(applicationId:environment:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 14,
+      "symbol": "PaymentAction.init(credentials:delegate:configuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 23,
+      "symbol": "PaymentAction.configuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 24,
+      "symbol": "PaymentAction.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 76,
+      "symbol": "PaymentAction.bankPaymentSheet(showCancelButton:showCancelItem:accountType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 91,
+      "symbol": "PaymentAction.didSucceed(paymentController:instrument:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 95,
+      "symbol": "PaymentAction.didCancel(paymentController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 99,
+      "symbol": "PaymentAction.didFail(paymentController:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentActionDelegate.swift",
+      "line": 11,
+      "symbol": "PaymentActionDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentActionDelegate.swift",
+      "line": 12,
+      "symbol": "PaymentActionDelegate.didSucceed(paymentController:instrument:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentActionDelegate.swift",
+      "line": 13,
+      "symbol": "PaymentActionDelegate.didCancel(paymentController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentActionDelegate.swift",
+      "line": 14,
+      "symbol": "PaymentActionDelegate.didFail(paymentController:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 49,
+      "symbol": "PaymentInputController.Style.complete",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 50,
+      "symbol": "PaymentInputController.Style.partial",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 51,
+      "symbol": "PaymentInputController.Style.basic",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 52,
+      "symbol": "PaymentInputController.Style.minimal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 53,
+      "symbol": "PaymentInputController.Style.basicBank",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 57,
+      "symbol": "PaymentInputController.ACHStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 58,
+      "symbol": "PaymentInputController.ACHStyle.basic",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 159,
+      "symbol": "PaymentInputController.Branding",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 160,
+      "symbol": "PaymentInputController.Branding.init(image:title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 170,
+      "symbol": "PaymentInputController.Configuration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 171,
+      "symbol": "PaymentInputController.Configuration.init(title:branding:buttonTitle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 177,
+      "symbol": "PaymentInputController.Configuration.title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 178,
+      "symbol": "PaymentInputController.Configuration.branding",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
+      "line": 179,
+      "symbol": "PaymentInputController.Configuration.buttonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
+      "line": 137,
+      "symbol": "PaymentInputController.config",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
+      "line": 193,
+      "symbol": "PaymentInputController.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
+      "line": 196,
+      "symbol": "PaymentInputController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
+      "line": 146,
+      "symbol": "BankAccountType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
+      "line": 147,
+      "symbol": "BankAccountType.personalChecking",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
+      "line": 148,
+      "symbol": "BankAccountType.personalSavings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
+      "line": 149,
+      "symbol": "BankAccountType.businessChecking",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
+      "line": 150,
+      "symbol": "BankAccountType.businessSavings",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/jack/work/Finix/PaymentSheet"
+}

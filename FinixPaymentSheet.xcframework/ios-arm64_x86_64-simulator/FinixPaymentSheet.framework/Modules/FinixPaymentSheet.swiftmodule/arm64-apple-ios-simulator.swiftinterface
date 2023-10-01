@@ -7,7 +7,7 @@ import Swift
 import UIKit
 import _Concurrency
 import _StringProcessing
-public protocol AddressProtocol : FinixPaymentSheet.SingleLineDisplay {
+public protocol AddressProtocol {
   var line1: Swift.String { get }
   var line2: Swift.String? { get }
   var city: Swift.String { get }
@@ -27,14 +27,6 @@ public struct Address : FinixPaymentSheet.AddressProtocol {
 }
 extension FinixPaymentSheet.Address : Swift.Encodable {
   public func encode(to encoder: any Swift.Encoder) throws
-}
-public protocol SingleLineDisplay {
-  var singleLine: Swift.String { get }
-}
-extension FinixPaymentSheet.SingleLineDisplay where Self : FinixPaymentSheet.AddressProtocol {
-  public var singleLine: Swift.String {
-    get
-  }
 }
 public struct Card {
   public init(name: Swift.String, cardNumber: Swift.String, expiration: FinixPaymentSheet.Expiration, securityCode: Swift.String)
@@ -203,11 +195,6 @@ extension FinixPaymentSheet.PaymentInputController : UIKit.UITextFieldDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc dynamic public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-}
-extension UIKit.UIColor {
-  convenience public init?(hex: Swift.String)
-  convenience public init(r u8r: Swift.UInt8, g u8g: Swift.UInt8, b u8b: Swift.UInt8, a u8a: Swift.UInt8 = 0xFF)
-  convenience public init(int32 hex: Swift.UInt32)
 }
 extension FinixPaymentSheet.BankAccountType : Swift.Equatable {}
 extension FinixPaymentSheet.BankAccountType : Swift.Hashable {}
