@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IryTbCk+tdRHwlNqGY49Vs5Q4ig=
+		Hs6Ju2QFt9JVEUYSkyAlW77Nfg8=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		/37bZBHJpvQVBAoVKi7hnNTY6qI=
+		FGNsiffv5ceskCbJU0tBjMQNx/I=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		0Ks8YIycIkdkjdYiYiUcBX3TDn0=
+		UC9ItoKGGj3a6Jcoq9Zs2sjCAY4=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		0NX1zA2ivtxbQIefkwXMBAd1r18=
+		zKwgtK86aYOOoEWqS0c6wCfIQLc=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0Ks8YIycIkdkjdYiYiUcBX3TDn0=
+		UC9ItoKGGj3a6Jcoq9Zs2sjCAY4=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EilUqEYWGfIV5bDBVUJ5Olu4agw=
+		5cSIwYJa3c4NtlB5HD2RI9kNKYw=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		/37bZBHJpvQVBAoVKi7hnNTY6qI=
+		FGNsiffv5ceskCbJU0tBjMQNx/I=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		zVVOGWW3O5pFIcJEn+ten6233MY=
+		U+OpVXrNFc9Et13UBFlmsib006g=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		cxQizGWxSRFUBD6TZzZeLyzVnC0=
+		fhQLc9G0kFC+/9HqgdER0LbnmgQ=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		zVVOGWW3O5pFIcJEn+ten6233MY=
+		U+OpVXrNFc9Et13UBFlmsib006g=
 		</data>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		i9gVtonSeP+CfoIEZRiNOOlh8zQ=
+		3E9//l9v6TCFiDg5S1q2K6QyeHQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eX1+ACvDKSEDsjrY52hYvdPFmPtuRLnPa7wh9X3f9jo=
+			fzhynsGPw0DhtvjtDZogho3A+RRQu8QF4lrXhAotrdU=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HaxH74CVgF+m9XSUjz+Z4UVt4J9yrGahg30ZIYM5kYo=
+			yLaH/jcUlM3RVLmvGdpRaxuNZzwlWefMeg5Nx45I0+U=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X1WhqzWcABCN18uYPXKYaADj2CNZqL4OdsU8VaSQ8gE=
+			LvJY71u1OtpCDnHydSQSvG3h5pnh23FvYaO0juqkCHI=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HaxH74CVgF+m9XSUjz+Z4UVt4J9yrGahg30ZIYM5kYo=
+			yLaH/jcUlM3RVLmvGdpRaxuNZzwlWefMeg5Nx45I0+U=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lBaMNPslAKLxM52D8tVo4zjr3WXKq1RoIP4yNgultpo=
+			2SVT+D2RCvnDwVOrYAzYSGtbRN8uHthHbUn2PNpSLD4=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eX1+ACvDKSEDsjrY52hYvdPFmPtuRLnPa7wh9X3f9jo=
+			fzhynsGPw0DhtvjtDZogho3A+RRQu8QF4lrXhAotrdU=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N/SQ7rfmC0qRKvZJiM/Gy0RUw+xWQrmrflPrZmy3k7U=
+			iAAiu930HNQYMHH23B0ZkWiR6g74KYNuRLWnoquFrTc=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q2K38GvDoYTyEeOBp+rhHjV7//PBRXDjqnK0W1oEscs=
+			oMUM22a2kanhvszxh8fbVneVBnA3oYMxgUp8rrglcPA=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N/SQ7rfmC0qRKvZJiM/Gy0RUw+xWQrmrflPrZmy3k7U=
+			iAAiu930HNQYMHH23B0ZkWiR6g74KYNuRLWnoquFrTc=
 			</data>
 		</dict>
 		<key>Modules/FinixPaymentSheet.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			s1p7M+nRFyTVuxdeyrqW7AcLJGCgQ3ZUHtOXIRyWMMc=
+			Uclxz2J/zG4E9r6mp7Cjac2nV+lybfc3HVRCSzscYtg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

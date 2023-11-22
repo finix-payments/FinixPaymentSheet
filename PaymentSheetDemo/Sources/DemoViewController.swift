@@ -14,6 +14,27 @@ let APPLICATION_ID = "APgPDQrLD52TYvqazjHJJchM"
 let BRANDING_LOGO: UIImage? = #imageLiteral(resourceName: "FinixLogo")
 let BRANDING_NAME = "Daphne's Corner"
 
+// NOTE: customize payment sheet colors.
+// `default` theme can be copied and individual colors overriden
+let customTheme: ColorTheme = {
+    var myTheme: ColorTheme = .default
+
+    myTheme.surface = .brown
+
+    myTheme.label = .red
+    myTheme.text = .green
+    myTheme.container = .yellow
+    myTheme.cancelButton = .magenta
+    myTheme.cancelButtonText = .orange
+
+    myTheme.tokenizeButton = .lightGray
+    myTheme.tokenizeButtonText = .purple
+
+    myTheme.errorLabel = .blue
+    myTheme.logoText = .green
+    return myTheme
+}()
+
 /**
  This controller demonstrates usage of the PaymentSheet.
   It is expected to be pushed onto a navigation controller for the nav controller presentation styles
@@ -211,6 +232,7 @@ extension DemoViewController {
     private func modalPresentSheet(style: PaymentInputController.Style) {
         // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
         let paymentController = paymentSDK.paymentSheet(style: style,
+//                                                        theme: customTheme,
                                                         showCancelButton: showCancelButton,
                                                         showCancelItem: true,
                                                         showCountry: showCountry)
@@ -222,6 +244,7 @@ extension DemoViewController {
     // push a payment sheet onto the parent navigation controller
     private func navigationPushSheet(style: PaymentInputController.Style) {
         let paymentSheet = paymentSDK.paymentSheet(style: style,
+//                                                   theme: customTheme,
                                                    showCancelButton: showCancelButton,
                                                    showCancelItem: false,
                                                    showCountry: showCountry)

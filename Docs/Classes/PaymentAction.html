@@ -17,7 +17,7 @@
     <a title="PaymentAction Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">FinixPaymentSheet 1.0.1 Docs</a> (38% documented)</p>
+        <p><a href="../index.html">FinixPaymentSheet 1.0.2 Docs</a> (31% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -101,6 +101,9 @@
                 <a href="../Protocols/AddressProtocol.html">AddressProtocol</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/ColorThemeProtocol.html">ColorThemeProtocol</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a>
               </li>
             </ul>
@@ -113,6 +116,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Card.html">Card</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ColorTheme.html">ColorTheme</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Expiration.html">Expiration</a>
@@ -254,9 +260,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF"></a>
-                    <a name="//apple_ref/swift/Method/paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF">paymentSheet(style:<wbr>showCancelButton:<wbr>showCancelItem:<wbr>card:<wbr>showCountry:<wbr>address:<wbr>)</a>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC07paymentC05style5theme16showCancelButton0hI4Item4card0H7Country7addressAA0B15InputControllerCAM5StyleO_AA18ColorThemeProtocol_pS2bAA4CardVSgSbAA07AddressT0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/paymentSheet(style:theme:showCancelButton:showCancelItem:card:showCountry:address:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC07paymentC05style5theme16showCancelButton0hI4Item4card0H7Country7addressAA0B15InputControllerCAM5StyleO_AA18ColorThemeProtocol_pS2bAA4CardVSgSbAA07AddressT0_pSgtF">paymentSheet(style:<wbr>theme:<wbr>showCancelButton:<wbr>showCancelItem:<wbr>card:<wbr>showCountry:<wbr>address:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -272,6 +278,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentSheet</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="o">.</span><span class="kt">Style</span><span class="p">,</span>
+                  <span class="nv">theme</span><span class="p">:</span> <span class="n">any</span> <span class="kt"><a href="../Protocols/ColorThemeProtocol.html">ColorThemeProtocol</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/ColorTheme.html">ColorTheme</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
                   <span class="nv">showCancelButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel button by default */</span>
                   <span class="nv">showCancelItem</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel item by default because it assumes modal presentation */</span>
                   <span class="nv">card</span><span class="p">:</span> <span class="kt"><a href="../Structs/Card.html">Card</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">showCountry</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
@@ -374,7 +381,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Modally present a payment sheet that was created with <code><a href="../Classes/PaymentAction.html#/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF">paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)</a></code></p>
+                        <p>Modally present a payment sheet that was created with <code>paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)</code></p>
 
                       </div>
                       <div class="declaration">
@@ -503,7 +510,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://developers.finixpayments.com" target="_blank" rel="external noopener">Finix Payments</a>. All rights reserved. (Last updated: 2023-10-01)</p>
+          <p>&copy; 2023 <a class="link" href="https://developers.finixpayments.com" target="_blank" rel="external noopener">Finix Payments</a>. All rights reserved. (Last updated: 2023-11-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
