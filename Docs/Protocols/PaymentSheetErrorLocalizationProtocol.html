@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Address Structure Reference</title>
+    <title>PaymentSheetErrorLocalizationProtocol Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/Address" class="dashAnchor"></a>
-    <a title="Address Structure Reference"></a>
+    <a name="//apple_ref/swift/Protocol/PaymentSheetErrorLocalizationProtocol" class="dashAnchor"></a>
+    <a title="PaymentSheetErrorLocalizationProtocol Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">FinixPaymentSheet 1.0.3 Docs</a> (21% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FinixPaymentSheet Reference</a>
         <img id="carat" src="../img/carat.png" alt=""/>
-        Address Structure Reference
+        PaymentSheetErrorLocalizationProtocol Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -168,12 +168,11 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Address</h1>
+            <h1>PaymentSheetErrorLocalizationProtocol</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Address</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/AddressProtocol.html">AddressProtocol</a></span><span class="p">,</span> <span class="kt">AddressEncodable</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Address</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PaymentSheetErrorLocalizationProtocol</span></code></pre>
 
                 </div>
               </div>
@@ -186,9 +185,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV5line15line24city6region10postalCode7countryACSS_SSSgS4Stcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(line1:line2:city:region:postalCode:country:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV5line15line24city6region10postalCode7countryACSS_SSSgS4Stcfc">init(line1:<wbr>line2:<wbr>city:<wbr>region:<wbr>postalCode:<wbr>country:<wbr>)</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP27cardNumberInvalidCharactersSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardNumberInvalidCharacters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP27cardNumberInvalidCharactersSSvp">cardNumberInvalidCharacters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -203,7 +202,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">line1</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">city</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">postalCode</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">country</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cardNumberInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -213,9 +212,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV5line1SSvp"></a>
-                    <a name="//apple_ref/swift/Property/line1" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV5line1SSvp">line1</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP17invalidCardNumberSSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidCardNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP17invalidCardNumberSSvp">invalidCardNumber</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,7 +229,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">line1</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">invalidCardNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -240,9 +239,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV5line2SSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/line2" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV5line2SSSgvp">line2</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21selectBankAccountTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/selectBankAccountType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21selectBankAccountTypeSSvp">selectBankAccountType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,7 +256,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">line2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">selectBankAccountType</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -267,9 +266,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV4citySSvp"></a>
-                    <a name="//apple_ref/swift/Property/city" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV4citySSvp">city</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16invalidSelectionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidSelection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16invalidSelectionSSvp">invalidSelection</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -284,7 +283,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">city</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">invalidSelection</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -294,9 +293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV6regionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/region" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV6regionSSvp">region</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP23expiryEnterMonthAndYearSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryEnterMonthAndYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP23expiryEnterMonthAndYearSSvp">expiryEnterMonthAndYear</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -311,7 +310,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">region</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expiryEnterMonthAndYear</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -321,9 +320,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV10postalCodeSSvp"></a>
-                    <a name="//apple_ref/swift/Property/postalCode" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV10postalCodeSSvp">postalCode</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP23expiryInvalidCharactersSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryInvalidCharacters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP23expiryInvalidCharactersSSvp">expiryInvalidCharacters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -338,7 +337,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">postalCode</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expiryInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -348,9 +347,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV7countrySSvp"></a>
-                    <a name="//apple_ref/swift/Property/country" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV7countrySSvp">country</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16expiryMonthRangeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryMonthRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16expiryMonthRangeSSvp">expiryMonthRange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -365,7 +364,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">country</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expiryMonthRange</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -375,9 +374,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17FinixPaymentSheet7AddressV7addressAcA0D8Protocol_p_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(address:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17FinixPaymentSheet7AddressV7addressAcA0D8Protocol_p_tcfc">init(address:<wbr>)</a>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16expiryYearFormatSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryYearFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16expiryYearFormatSSvp">expiryYearFormat</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -392,7 +391,115 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AddressProtocol.html">AddressProtocol</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expiryYearFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP15expiryInThePastSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryInThePast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP15expiryInThePastSSvp">expiryInThePast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">expiryInThePast</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16regionEnterStateSSvp"></a>
+                    <a name="//apple_ref/swift/Property/regionEnterState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP16regionEnterStateSSvp">regionEnterState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">regionEnterState</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP12invalidInputSSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP12invalidInputSSvp">invalidInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">invalidInput</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21minimumLengthRequiredSSvp"></a>
+                    <a name="//apple_ref/swift/Property/minimumLengthRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21minimumLengthRequiredSSvp">minimumLengthRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>NOTE: this string must contain a placeholder for the minimum length. It is an <code>NSString</code> <code>%@</code> placeholder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">minimumLengthRequired</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

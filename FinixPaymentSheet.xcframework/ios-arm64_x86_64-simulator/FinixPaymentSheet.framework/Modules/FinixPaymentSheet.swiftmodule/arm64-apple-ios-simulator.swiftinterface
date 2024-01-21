@@ -123,6 +123,7 @@ public struct FinixError : Swift.Error {
 public class PaymentAction {
   public init(credentials: FinixPaymentSheet.FinixCredentials, delegate: (any FinixPaymentSheet.PaymentActionDelegate)? = nil, configuration: FinixPaymentSheet.PaymentInputController.Configuration? = nil)
   public var configuration: FinixPaymentSheet.PaymentInputController.Configuration
+  public var localization: FinixPaymentSheet.PaymentInputController.Localization
   weak public var delegate: (any FinixPaymentSheet.PaymentActionDelegate)?
   @objc deinit
 }
@@ -174,6 +175,97 @@ extension FinixPaymentSheet.PaymentInputController {
     public let title: Swift.String?
     public let branding: FinixPaymentSheet.PaymentInputController.Branding
     public let buttonTitle: Swift.String
+  }
+}
+public protocol PaymentSheetErrorLocalizationProtocol {
+  var cardNumberInvalidCharacters: Swift.String { get }
+  var invalidCardNumber: Swift.String { get }
+  var selectBankAccountType: Swift.String { get }
+  var invalidSelection: Swift.String { get }
+  var expiryEnterMonthAndYear: Swift.String { get }
+  var expiryInvalidCharacters: Swift.String { get }
+  var expiryMonthRange: Swift.String { get }
+  var expiryYearFormat: Swift.String { get }
+  var expiryInThePast: Swift.String { get }
+  var regionEnterState: Swift.String { get }
+  var invalidInput: Swift.String { get }
+  var minimumLengthRequired: Swift.String { get }
+}
+public protocol PaymentSheetLocalizationProtocol : FinixPaymentSheet.PaymentSheetErrorLocalizationProtocol {
+  var nameTitle: Swift.String { get }
+  var addressTitle: Swift.String { get }
+  var addressLine2Title: Swift.String { get }
+  var cityTitle: Swift.String { get }
+  var regionTitle: Swift.String { get }
+  var postalCodeTitle: Swift.String { get }
+  var cardNumberTitle: Swift.String { get }
+  var cardExpiryTitle: Swift.String { get }
+  var cardCVVTitle: Swift.String { get }
+  var bankAccountNumberTitle: Swift.String { get }
+  var bankRoutingNumberTitle: Swift.String { get }
+  var bankAccountTypeTitle: Swift.String { get }
+  var countryRegionTitle: Swift.String { get }
+  var namePlaceholder: Swift.String { get }
+  var addressPlaceholder: Swift.String { get }
+  var addressLine2Placeholder: Swift.String { get }
+  var cityPlaceholder: Swift.String { get }
+  var regionPlaceholder: Swift.String { get }
+  var postalCodePlaceholder: Swift.String { get }
+  var cardNumberPlaceholder: Swift.String { get }
+  var cardExpiryPlaceholder: Swift.String { get }
+  var cardCVVPlaceholder: Swift.String { get }
+  var bankAccountNumberPlaceholder: Swift.String { get }
+  var bankRoutingNumberPlaceholder: Swift.String { get }
+  var bankAccountTypePlaceholder: Swift.String { get }
+  var bankAccountPersonalChecking: Swift.String { get }
+  var bankAccountPersonalSavings: Swift.String { get }
+  var bankAccountBusinessChecking: Swift.String { get }
+  var bankAccountBusinessSavings: Swift.String { get }
+}
+extension FinixPaymentSheet.PaymentInputController {
+  public struct Localization : FinixPaymentSheet.PaymentSheetLocalizationProtocol {
+    public init(cardNumberInvalidCharacters: Swift.String = "Card numbers can only contain 0-9.", invalidCardNumber: Swift.String = "Please enter valid card number.", selectBankAccountType: Swift.String = "Please select account type.", invalidSelection: Swift.String = "Invalid selection.", expiryEnterMonthAndYear: Swift.String = "Enter month and year.", expiryInvalidCharacters: Swift.String = "Invalid characters.", expiryMonthRange: Swift.String = "Month must be 1-12.", expiryYearFormat: Swift.String = "Enter year (YY).", expiryInThePast: Swift.String = "Expiry in the past.", regionEnterState: Swift.String = "Enter state.", invalidInput: Swift.String = "Invalid characters.", minimumLengthRequired: Swift.String = "Minimum of %@ required.", nameTitle: Swift.String = "Name", addressTitle: Swift.String = "Address", addressLine2Title: Swift.String = "Line 2", cityTitle: Swift.String = "City", regionTitle: Swift.String = "State", postalCodeTitle: Swift.String = "Postal Code", cardNumberTitle: Swift.String = "Card Number", cardExpiryTitle: Swift.String = "Expiry", cardCVVTitle: Swift.String = "CVV/CVC", bankAccountNumberTitle: Swift.String = "Account Number", bankRoutingNumberTitle: Swift.String = "Routing Number", bankAccountTypeTitle: Swift.String = "Account Type", countryRegionTitle: Swift.String = "Country or Region", namePlaceholder: Swift.String = "First Last", addressPlaceholder: Swift.String = "123 Main Street", addressLine2Placeholder: Swift.String = "#1", cityPlaceholder: Swift.String = "City", regionPlaceholder: Swift.String = "CA", postalCodePlaceholder: Swift.String = "00000", cardNumberPlaceholder: Swift.String = "0000 0000 0000 0000", cardExpiryPlaceholder: Swift.String = "MM/YY", cardCVVPlaceholder: Swift.String = "111", bankAccountNumberPlaceholder: Swift.String = "00000", bankRoutingNumberPlaceholder: Swift.String = "000000000", bankAccountTypePlaceholder: Swift.String = "Checking/Savings", bankAccountPersonalChecking: Swift.String = "Personal Checking", bankAccountPersonalSavings: Swift.String = "Personal Savings", bankAccountBusinessChecking: Swift.String = "Business Checking", bankAccountBusinessSavings: Swift.String = "Business Savings")
+    public var cardNumberInvalidCharacters: Swift.String
+    public var invalidCardNumber: Swift.String
+    public var selectBankAccountType: Swift.String
+    public var invalidSelection: Swift.String
+    public var expiryEnterMonthAndYear: Swift.String
+    public var expiryInvalidCharacters: Swift.String
+    public var expiryMonthRange: Swift.String
+    public var expiryYearFormat: Swift.String
+    public var expiryInThePast: Swift.String
+    public var regionEnterState: Swift.String
+    public var invalidInput: Swift.String
+    public var minimumLengthRequired: Swift.String
+    public var nameTitle: Swift.String
+    public var addressTitle: Swift.String
+    public var addressLine2Title: Swift.String
+    public var cityTitle: Swift.String
+    public var regionTitle: Swift.String
+    public var postalCodeTitle: Swift.String
+    public var cardNumberTitle: Swift.String
+    public var cardExpiryTitle: Swift.String
+    public var cardCVVTitle: Swift.String
+    public var bankAccountNumberTitle: Swift.String
+    public var bankRoutingNumberTitle: Swift.String
+    public var bankAccountTypeTitle: Swift.String
+    public var countryRegionTitle: Swift.String
+    public var namePlaceholder: Swift.String
+    public var addressPlaceholder: Swift.String
+    public var addressLine2Placeholder: Swift.String
+    public var cityPlaceholder: Swift.String
+    public var regionPlaceholder: Swift.String
+    public var postalCodePlaceholder: Swift.String
+    public var cardNumberPlaceholder: Swift.String
+    public var cardExpiryPlaceholder: Swift.String
+    public var cardCVVPlaceholder: Swift.String
+    public var bankAccountNumberPlaceholder: Swift.String
+    public var bankRoutingNumberPlaceholder: Swift.String
+    public var bankAccountTypePlaceholder: Swift.String
+    public var bankAccountPersonalChecking: Swift.String
+    public var bankAccountPersonalSavings: Swift.String
+    public var bankAccountBusinessChecking: Swift.String
+    public var bankAccountBusinessSavings: Swift.String
   }
 }
 public protocol ColorThemeProtocol : Swift.Equatable {

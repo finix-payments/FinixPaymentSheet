@@ -321,6 +321,7 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 
 
 
+
 @class UITextField;
 
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
