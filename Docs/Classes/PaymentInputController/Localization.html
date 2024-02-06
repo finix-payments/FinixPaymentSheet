@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Localization Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Localization" class="dashAnchor"></a>
+    <a title="Localization Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">FinixPaymentSheet 1.0.3 Docs</a> (21% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">FinixPaymentSheet Reference</a>
+        <img id="carat" src="../../img/carat.png" alt=""/>
+        Localization Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../gettingstarted.html">GettingStarted</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentAction.html">PaymentAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController.html">PaymentInputController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController/ACHStyle.html">– ACHStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController/Branding.html">– Branding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/PaymentInputController/Localization.html">– Localization</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Enums/BankAccountType.html">BankAccountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/FinixAPIEndpoint.html">FinixAPIEndpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ISOCurrency.html">ISOCurrency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/PaymentInstrumentType.html">PaymentInstrumentType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions.html#/AppKit">AppKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/RandomAccessCollection.html">RandomAccessCollection</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/AddressProtocol.html">AddressProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ColorThemeProtocol.html">ColorThemeProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/PaymentSheetErrorLocalizationProtocol.html">PaymentSheetErrorLocalizationProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/PaymentSheetLocalizationProtocol.html">PaymentSheetLocalizationProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/Address.html">Address</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Card.html">Card</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ColorTheme.html">ColorTheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Expiration.html">Expiration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/FinixCredentials.html">FinixCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/FinixError.html">FinixError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/FinixError/Code.html">– Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs.html#/s:17FinixPaymentSheet11MinimalCardV">MinimalCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/TokenResponse.html">TokenResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:17FinixPaymentSheet9BasicCarda">BasicCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:17FinixPaymentSheet12CompleteCarda">CompleteCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:17FinixPaymentSheet11PartialCarda">PartialCard</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Localization</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Localization</span> <span class="p">:</span> <span class="kt"><a href="../../Protocols/PaymentSheetLocalizationProtocol.html">PaymentSheetLocalizationProtocol</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A structure to provide:</p>
+
+<ul>
+<li>field titles</li>
+<li>field placeholders</li>
+<li>error/validation messages
+When creating you may selectively declare or override messages as needed. The default English string is provided.</li>
+</ul>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27cardNumberInvalidCharacters011invalidCardH021selectBankAccountType0K9Selection23expiryEnterMonthAndYear0riJ00rT5Range0rV6Format0R9InThePast06regionS5State0kD021minimumLengthRequired9nameTitle12addressTitle17addressLine2Title9cityTitle11regionTitle15postalCodeTitle0gH5Title0G11ExpiryTitle0G8CVVTitle04bankoH5Title011bankRoutingH5Title04bankoP5Title18countryRegionTitle15namePlaceholder18addressPlaceholder23addressLine2Placeholder15cityPlaceholder17regionPlaceholder21postalCodePlaceholder0gH11Placeholder0G17ExpiryPlaceholder0G14CVVPlaceholder04bankoH11Placeholder011bankRoutingH11Placeholder04bankoP11Placeholder04bankO16PersonalChecking04bankO15PersonalSavings04bankO16BusinessChecking04bankO15BusinessSavingsAESS_S40Stcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(cardNumberInvalidCharacters:invalidCardNumber:selectBankAccountType:invalidSelection:expiryEnterMonthAndYear:expiryInvalidCharacters:expiryMonthRange:expiryYearFormat:expiryInThePast:regionEnterState:invalidInput:minimumLengthRequired:nameTitle:addressTitle:addressLine2Title:cityTitle:regionTitle:postalCodeTitle:cardNumberTitle:cardExpiryTitle:cardCVVTitle:bankAccountNumberTitle:bankRoutingNumberTitle:bankAccountTypeTitle:countryRegionTitle:namePlaceholder:addressPlaceholder:addressLine2Placeholder:cityPlaceholder:regionPlaceholder:postalCodePlaceholder:cardNumberPlaceholder:cardExpiryPlaceholder:cardCVVPlaceholder:bankAccountNumberPlaceholder:bankRoutingNumberPlaceholder:bankAccountTypePlaceholder:bankAccountPersonalChecking:bankAccountPersonalSavings:bankAccountBusinessChecking:bankAccountBusinessSavings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27cardNumberInvalidCharacters011invalidCardH021selectBankAccountType0K9Selection23expiryEnterMonthAndYear0riJ00rT5Range0rV6Format0R9InThePast06regionS5State0kD021minimumLengthRequired9nameTitle12addressTitle17addressLine2Title9cityTitle11regionTitle15postalCodeTitle0gH5Title0G11ExpiryTitle0G8CVVTitle04bankoH5Title011bankRoutingH5Title04bankoP5Title18countryRegionTitle15namePlaceholder18addressPlaceholder23addressLine2Placeholder15cityPlaceholder17regionPlaceholder21postalCodePlaceholder0gH11Placeholder0G17ExpiryPlaceholder0G14CVVPlaceholder04bankoH11Placeholder011bankRoutingH11Placeholder04bankoP11Placeholder04bankO16PersonalChecking04bankO15PersonalSavings04bankO16BusinessChecking04bankO15BusinessSavingsAESS_S40Stcfc">init(cardNumberInvalidCharacters:<wbr>invalidCardNumber:<wbr>selectBankAccountType:<wbr>invalidSelection:<wbr>expiryEnterMonthAndYear:<wbr>expiryInvalidCharacters:<wbr>expiryMonthRange:<wbr>expiryYearFormat:<wbr>expiryInThePast:<wbr>regionEnterState:<wbr>invalidInput:<wbr>minimumLengthRequired:<wbr>nameTitle:<wbr>addressTitle:<wbr>addressLine2Title:<wbr>cityTitle:<wbr>regionTitle:<wbr>postalCodeTitle:<wbr>cardNumberTitle:<wbr>cardExpiryTitle:<wbr>cardCVVTitle:<wbr>bankAccountNumberTitle:<wbr>bankRoutingNumberTitle:<wbr>bankAccountTypeTitle:<wbr>countryRegionTitle:<wbr>namePlaceholder:<wbr>addressPlaceholder:<wbr>addressLine2Placeholder:<wbr>cityPlaceholder:<wbr>regionPlaceholder:<wbr>postalCodePlaceholder:<wbr>cardNumberPlaceholder:<wbr>cardExpiryPlaceholder:<wbr>cardCVVPlaceholder:<wbr>bankAccountNumberPlaceholder:<wbr>bankRoutingNumberPlaceholder:<wbr>bankAccountTypePlaceholder:<wbr>bankAccountPersonalChecking:<wbr>bankAccountPersonalSavings:<wbr>bankAccountBusinessChecking:<wbr>bankAccountBusinessSavings:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">cardNumberInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Card numbers can only contain 0-9."</span><span class="p">,</span> <span class="nv">invalidCardNumber</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Please enter valid card number."</span><span class="p">,</span> <span class="nv">selectBankAccountType</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Please select account type."</span><span class="p">,</span> <span class="nv">invalidSelection</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Invalid selection."</span><span class="p">,</span> <span class="nv">expiryEnterMonthAndYear</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Enter month and year."</span><span class="p">,</span> <span class="nv">expiryInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Invalid characters."</span><span class="p">,</span> <span class="nv">expiryMonthRange</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Month must be 1-12."</span><span class="p">,</span> <span class="nv">expiryYearFormat</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Enter year (YY)."</span><span class="p">,</span> <span class="nv">expiryInThePast</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Expiry in the past."</span><span class="p">,</span> <span class="nv">regionEnterState</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Enter state."</span><span class="p">,</span> <span class="nv">invalidInput</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Invalid characters."</span><span class="p">,</span> <span class="nv">minimumLengthRequired</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Minimum of %@ required."</span><span class="p">,</span>
+            <span class="nv">nameTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Name"</span><span class="p">,</span> <span class="nv">addressTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Address"</span><span class="p">,</span> <span class="nv">addressLine2Title</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Line 2"</span><span class="p">,</span> <span class="nv">cityTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"City"</span><span class="p">,</span> <span class="nv">regionTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"State"</span><span class="p">,</span> <span class="nv">postalCodeTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Postal Code"</span><span class="p">,</span> <span class="nv">cardNumberTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Card Number"</span><span class="p">,</span> <span class="nv">cardExpiryTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Expiry"</span><span class="p">,</span>
+            <span class="nv">cardCVVTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"CVV/CVC"</span><span class="p">,</span>
+            <span class="nv">bankAccountNumberTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Account Number"</span><span class="p">,</span> <span class="nv">bankRoutingNumberTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Routing Number"</span><span class="p">,</span> <span class="nv">bankAccountTypeTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Account Type"</span><span class="p">,</span> <span class="nv">countryRegionTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Country or Region"</span><span class="p">,</span> <span class="nv">namePlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"First Last"</span><span class="p">,</span> <span class="nv">addressPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"123 Main Street"</span><span class="p">,</span> <span class="nv">addressLine2Placeholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"#1"</span><span class="p">,</span> <span class="nv">cityPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"City"</span><span class="p">,</span> <span class="nv">regionPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"CA"</span><span class="p">,</span> <span class="nv">postalCodePlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"00000"</span><span class="p">,</span> <span class="nv">cardNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"0000 0000 0000 0000"</span><span class="p">,</span> <span class="nv">cardExpiryPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"MM/YY"</span><span class="p">,</span>
+            <span class="nv">cardCVVPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"111"</span><span class="p">,</span>
+            <span class="nv">bankAccountNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"00000"</span><span class="p">,</span> <span class="nv">bankRoutingNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"000000000"</span><span class="p">,</span> <span class="nv">bankAccountTypePlaceholder</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Checking/Savings"</span><span class="p">,</span> <span class="nv">bankAccountPersonalChecking</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Personal Checking"</span><span class="p">,</span> <span class="nv">bankAccountPersonalSavings</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Personal Savings"</span><span class="p">,</span> <span class="nv">bankAccountBusinessChecking</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Business Checking"</span><span class="p">,</span> <span class="nv">bankAccountBusinessSavings</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"Business Savings"</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27cardNumberInvalidCharactersSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardNumberInvalidCharacters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27cardNumberInvalidCharactersSSvp">cardNumberInvalidCharacters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardNumberInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17invalidCardNumberSSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidCardNumber" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17invalidCardNumberSSvp">invalidCardNumber</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidCardNumber</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21selectBankAccountTypeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/selectBankAccountType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21selectBankAccountTypeSSvp">selectBankAccountType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">selectBankAccountType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16invalidSelectionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidSelection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16invalidSelectionSSvp">invalidSelection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidSelection</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23expiryEnterMonthAndYearSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryEnterMonthAndYear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23expiryEnterMonthAndYearSSvp">expiryEnterMonthAndYear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expiryEnterMonthAndYear</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23expiryInvalidCharactersSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryInvalidCharacters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23expiryInvalidCharactersSSvp">expiryInvalidCharacters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expiryInvalidCharacters</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16expiryMonthRangeSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryMonthRange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16expiryMonthRangeSSvp">expiryMonthRange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expiryMonthRange</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16expiryYearFormatSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryYearFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16expiryYearFormatSSvp">expiryYearFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expiryYearFormat</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15expiryInThePastSSvp"></a>
+                    <a name="//apple_ref/swift/Property/expiryInThePast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15expiryInThePastSSvp">expiryInThePast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">expiryInThePast</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16regionEnterStateSSvp"></a>
+                    <a name="//apple_ref/swift/Property/regionEnterState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV16regionEnterStateSSvp">regionEnterState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">regionEnterState</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV07invalidD0SSvp"></a>
+                    <a name="//apple_ref/swift/Property/invalidInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV07invalidD0SSvp">invalidInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidInput</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21minimumLengthRequiredSSvp"></a>
+                    <a name="//apple_ref/swift/Property/minimumLengthRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0bC25ErrorLocalizationProtocolP21minimumLengthRequiredSSvp">minimumLengthRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">minimumLengthRequired</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV9nameTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/nameTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV9nameTitleSSvp">nameTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">nameTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV12addressTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/addressTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV12addressTitleSSvp">addressTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">addressTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17addressLine2TitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/addressLine2Title" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17addressLine2TitleSSvp">addressLine2Title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">addressLine2Title</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV9cityTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cityTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV9cityTitleSSvp">cityTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cityTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV11regionTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/regionTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV11regionTitleSSvp">regionTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">regionTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15postalCodeTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/postalCodeTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15postalCodeTitleSSvp">postalCodeTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">postalCodeTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cardNumberTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardNumberTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cardNumberTitleSSvp">cardNumberTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardNumberTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cardExpiryTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardExpiryTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cardExpiryTitleSSvp">cardExpiryTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardExpiryTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV12cardCVVTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardCVVTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV12cardCVVTitleSSvp">cardCVVTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardCVVTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV22bankAccountNumberTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountNumberTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV22bankAccountNumberTitleSSvp">bankAccountNumberTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountNumberTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV22bankRoutingNumberTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankRoutingNumberTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV22bankRoutingNumberTitleSSvp">bankRoutingNumberTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankRoutingNumberTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV20bankAccountTypeTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountTypeTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV20bankAccountTypeTitleSSvp">bankAccountTypeTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountTypeTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18countryRegionTitleSSvp"></a>
+                    <a name="//apple_ref/swift/Property/countryRegionTitle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18countryRegionTitleSSvp">countryRegionTitle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">countryRegionTitle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15namePlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/namePlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15namePlaceholderSSvp">namePlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">namePlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18addressPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/addressPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18addressPlaceholderSSvp">addressPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">addressPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23addressLine2PlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/addressLine2Placeholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV23addressLine2PlaceholderSSvp">addressLine2Placeholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">addressLine2Placeholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cityPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cityPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV15cityPlaceholderSSvp">cityPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cityPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17regionPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/regionPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV17regionPlaceholderSSvp">regionPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">regionPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21postalCodePlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/postalCodePlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21postalCodePlaceholderSSvp">postalCodePlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">postalCodePlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21cardNumberPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardNumberPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21cardNumberPlaceholderSSvp">cardNumberPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21cardExpiryPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardExpiryPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV21cardExpiryPlaceholderSSvp">cardExpiryPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardExpiryPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18cardCVVPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/cardCVVPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV18cardCVVPlaceholderSSvp">cardCVVPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cardCVVPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV28bankAccountNumberPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountNumberPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV28bankAccountNumberPlaceholderSSvp">bankAccountNumberPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV28bankRoutingNumberPlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankRoutingNumberPlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV28bankRoutingNumberPlaceholderSSvp">bankRoutingNumberPlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankRoutingNumberPlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountTypePlaceholderSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountTypePlaceholder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountTypePlaceholderSSvp">bankAccountTypePlaceholder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountTypePlaceholder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27bankAccountPersonalCheckingSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountPersonalChecking" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27bankAccountPersonalCheckingSSvp">bankAccountPersonalChecking</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountPersonalChecking</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountPersonalSavingsSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountPersonalSavings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountPersonalSavingsSSvp">bankAccountPersonalSavings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountPersonalSavings</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27bankAccountBusinessCheckingSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountBusinessChecking" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV27bankAccountBusinessCheckingSSvp">bankAccountBusinessChecking</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountBusinessChecking</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountBusinessSavingsSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bankAccountBusinessSavings" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B15InputControllerC12LocalizationV26bankAccountBusinessSavingsSSvp">bankAccountBusinessSavings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">bankAccountBusinessSavings</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="https://developers.finixpayments.com" target="_blank" rel="external noopener">Finix Payments</a>. All rights reserved. (Last updated: 2024-01-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

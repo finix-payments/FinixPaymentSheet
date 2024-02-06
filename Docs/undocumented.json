@@ -100,7 +100,7 @@
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/CountryController/CountrySelectionController.swift",
-      "line": 105,
+      "line": 104,
       "symbol": "RandomAccessCollection.bisectToFirstIndex(where:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -318,34 +318,41 @@
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
       "line": 24,
+      "symbol": "PaymentAction.localization",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
+      "line": 25,
       "symbol": "PaymentAction.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 78,
+      "line": 80,
       "symbol": "PaymentAction.bankPaymentSheet(showCancelButton:showCancelItem:accountType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 93,
+      "line": 96,
       "symbol": "PaymentAction.didSucceed(paymentController:instrument:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 97,
+      "line": 100,
       "symbol": "PaymentAction.didCancel(paymentController:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 101,
+      "line": 104,
       "symbol": "PaymentAction.didFail(paymentController:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -473,6 +480,587 @@
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
       "line": 179,
       "symbol": "PaymentInputController.Configuration.buttonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 10,
+      "symbol": "PaymentSheetErrorLocalizationProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 11,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.cardNumberInvalidCharacters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 12,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.invalidCardNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 13,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.selectBankAccountType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 14,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.invalidSelection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 15,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.expiryEnterMonthAndYear",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 16,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.expiryInvalidCharacters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 17,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.expiryMonthRange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 18,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.expiryYearFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 19,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.expiryInThePast",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 20,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.regionEnterState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 21,
+      "symbol": "PaymentSheetErrorLocalizationProtocol.invalidInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 34,
+      "symbol": "PaymentSheetLocalizationProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 36,
+      "symbol": "PaymentSheetLocalizationProtocol.nameTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 37,
+      "symbol": "PaymentSheetLocalizationProtocol.addressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 38,
+      "symbol": "PaymentSheetLocalizationProtocol.addressLine2Title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 39,
+      "symbol": "PaymentSheetLocalizationProtocol.cityTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 40,
+      "symbol": "PaymentSheetLocalizationProtocol.regionTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 41,
+      "symbol": "PaymentSheetLocalizationProtocol.postalCodeTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 42,
+      "symbol": "PaymentSheetLocalizationProtocol.cardNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 43,
+      "symbol": "PaymentSheetLocalizationProtocol.cardExpiryTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 44,
+      "symbol": "PaymentSheetLocalizationProtocol.cardCVVTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 45,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 46,
+      "symbol": "PaymentSheetLocalizationProtocol.bankRoutingNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 47,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountTypeTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 49,
+      "symbol": "PaymentSheetLocalizationProtocol.countryRegionTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 52,
+      "symbol": "PaymentSheetLocalizationProtocol.namePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 53,
+      "symbol": "PaymentSheetLocalizationProtocol.addressPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 54,
+      "symbol": "PaymentSheetLocalizationProtocol.addressLine2Placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 55,
+      "symbol": "PaymentSheetLocalizationProtocol.cityPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 56,
+      "symbol": "PaymentSheetLocalizationProtocol.regionPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 57,
+      "symbol": "PaymentSheetLocalizationProtocol.postalCodePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 58,
+      "symbol": "PaymentSheetLocalizationProtocol.cardNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 59,
+      "symbol": "PaymentSheetLocalizationProtocol.cardExpiryPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 60,
+      "symbol": "PaymentSheetLocalizationProtocol.cardCVVPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 61,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 62,
+      "symbol": "PaymentSheetLocalizationProtocol.bankRoutingNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 63,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountTypePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 66,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountPersonalChecking",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 67,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountPersonalSavings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 68,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountBusinessChecking",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 69,
+      "symbol": "PaymentSheetLocalizationProtocol.bankAccountBusinessSavings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 79,
+      "symbol": "PaymentInputController.Localization.init(cardNumberInvalidCharacters:invalidCardNumber:selectBankAccountType:invalidSelection:expiryEnterMonthAndYear:expiryInvalidCharacters:expiryMonthRange:expiryYearFormat:expiryInThePast:regionEnterState:invalidInput:minimumLengthRequired:nameTitle:addressTitle:addressLine2Title:cityTitle:regionTitle:postalCodeTitle:cardNumberTitle:cardExpiryTitle:cardCVVTitle:bankAccountNumberTitle:bankRoutingNumberTitle:bankAccountTypeTitle:countryRegionTitle:namePlaceholder:addressPlaceholder:addressLine2Placeholder:cityPlaceholder:regionPlaceholder:postalCodePlaceholder:cardNumberPlaceholder:cardExpiryPlaceholder:cardCVVPlaceholder:bankAccountNumberPlaceholder:bankRoutingNumberPlaceholder:bankAccountTypePlaceholder:bankAccountPersonalChecking:bankAccountPersonalSavings:bankAccountBusinessChecking:bankAccountBusinessSavings:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 130,
+      "symbol": "PaymentInputController.Localization.cardNumberInvalidCharacters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 131,
+      "symbol": "PaymentInputController.Localization.invalidCardNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 132,
+      "symbol": "PaymentInputController.Localization.selectBankAccountType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 133,
+      "symbol": "PaymentInputController.Localization.invalidSelection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 134,
+      "symbol": "PaymentInputController.Localization.expiryEnterMonthAndYear",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 135,
+      "symbol": "PaymentInputController.Localization.expiryInvalidCharacters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 136,
+      "symbol": "PaymentInputController.Localization.expiryMonthRange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 137,
+      "symbol": "PaymentInputController.Localization.expiryYearFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 138,
+      "symbol": "PaymentInputController.Localization.expiryInThePast",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 139,
+      "symbol": "PaymentInputController.Localization.regionEnterState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 140,
+      "symbol": "PaymentInputController.Localization.invalidInput",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 145,
+      "symbol": "PaymentInputController.Localization.nameTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 146,
+      "symbol": "PaymentInputController.Localization.addressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 147,
+      "symbol": "PaymentInputController.Localization.addressLine2Title",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 148,
+      "symbol": "PaymentInputController.Localization.cityTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 149,
+      "symbol": "PaymentInputController.Localization.regionTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 150,
+      "symbol": "PaymentInputController.Localization.postalCodeTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 151,
+      "symbol": "PaymentInputController.Localization.cardNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 152,
+      "symbol": "PaymentInputController.Localization.cardExpiryTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 153,
+      "symbol": "PaymentInputController.Localization.cardCVVTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 154,
+      "symbol": "PaymentInputController.Localization.bankAccountNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 155,
+      "symbol": "PaymentInputController.Localization.bankRoutingNumberTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 156,
+      "symbol": "PaymentInputController.Localization.bankAccountTypeTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 157,
+      "symbol": "PaymentInputController.Localization.countryRegionTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 160,
+      "symbol": "PaymentInputController.Localization.namePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 161,
+      "symbol": "PaymentInputController.Localization.addressPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 162,
+      "symbol": "PaymentInputController.Localization.addressLine2Placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 163,
+      "symbol": "PaymentInputController.Localization.cityPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 164,
+      "symbol": "PaymentInputController.Localization.regionPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 165,
+      "symbol": "PaymentInputController.Localization.postalCodePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 166,
+      "symbol": "PaymentInputController.Localization.cardNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 167,
+      "symbol": "PaymentInputController.Localization.cardExpiryPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 168,
+      "symbol": "PaymentInputController.Localization.cardCVVPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 169,
+      "symbol": "PaymentInputController.Localization.bankAccountNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 170,
+      "symbol": "PaymentInputController.Localization.bankRoutingNumberPlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 171,
+      "symbol": "PaymentInputController.Localization.bankAccountTypePlaceholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 174,
+      "symbol": "PaymentInputController.Localization.bankAccountPersonalChecking",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 175,
+      "symbol": "PaymentInputController.Localization.bankAccountPersonalSavings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 176,
+      "symbol": "PaymentInputController.Localization.bankAccountBusinessChecking",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Localization.swift",
+      "line": 177,
+      "symbol": "PaymentInputController.Localization.bankAccountBusinessSavings",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -667,56 +1255,56 @@
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 140,
+      "line": 145,
       "symbol": "PaymentInputController.config",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 197,
+      "line": 203,
       "symbol": "PaymentInputController.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 200,
+      "line": 206,
       "symbol": "PaymentInputController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
-      "line": 146,
+      "line": 147,
       "symbol": "BankAccountType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
-      "line": 147,
+      "line": 148,
       "symbol": "BankAccountType.personalChecking",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
-      "line": 148,
+      "line": 149,
       "symbol": "BankAccountType.personalSavings",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
-      "line": 149,
+      "line": 150,
       "symbol": "BankAccountType.businessChecking",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/Validation/CardEntryField.swift",
-      "line": 150,
+      "line": 151,
       "symbol": "BankAccountType.businessSavings",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"

@@ -71,6 +71,18 @@ class DemoViewController: UITableViewController {
 
         // Set up configuration
         paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize")
+
+        /** NOTE: to provide your own customized text (e.g. localization), you may override the default localization.
+          E.g
+          .
+         ```
+         var localization = PaymentInputController.Localization()
+         localization.nameTitle = "名称"
+         localization.addressTitle = "地址"
+         paymentSDK.localization = localization
+         ```
+         **/
+
         // Designate a delegate
         paymentSDK.delegate = self
     }
@@ -232,7 +244,7 @@ extension DemoViewController {
     private func modalPresentSheet(style: PaymentInputController.Style) {
         // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
         let paymentController = paymentSDK.paymentSheet(style: style,
-//                                                        theme: customTheme,
+                                                        theme: customTheme,
                                                         showCancelButton: showCancelButton,
                                                         showCancelItem: true,
                                                         showCountry: showCountry)
@@ -244,7 +256,7 @@ extension DemoViewController {
     // push a payment sheet onto the parent navigation controller
     private func navigationPushSheet(style: PaymentInputController.Style) {
         let paymentSheet = paymentSDK.paymentSheet(style: style,
-//                                                   theme: customTheme,
+                                                   theme: customTheme,
                                                    showCancelButton: showCancelButton,
                                                    showCancelItem: false,
                                                    showCountry: showCountry)
