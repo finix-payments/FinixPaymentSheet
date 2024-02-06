@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -137,7 +137,8 @@
 		9010B5805C0C3CE4F5835CCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					202753A3A18D156B76F65337 = {
 						ProvisioningStyle = Automatic;
@@ -145,7 +146,7 @@
 				};
 			};
 			buildConfigurationList = C7E91328FC564A823B03F441 /* Build configuration list for PBXProject "PaymentSheetDemo" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

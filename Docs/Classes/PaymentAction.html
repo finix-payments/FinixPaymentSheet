@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PaymentAction Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PaymentAction" class="dashAnchor"></a>
+    <a title="PaymentAction Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FinixPaymentSheet 1.0.1 Docs</a> (38% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FinixPaymentSheet Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        PaymentAction Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../gettingstarted.html">GettingStarted</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentAction.html">PaymentAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentInputController.html">PaymentInputController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentInputController/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentInputController/ACHStyle.html">– ACHStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentInputController/Branding.html">– Branding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PaymentInputController/Configuration.html">– Configuration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/BankAccountType.html">BankAccountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FinixAPIEndpoint.html">FinixAPIEndpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ISOCurrency.html">ISOCurrency</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PaymentInstrumentType.html">PaymentInstrumentType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions.html#/AppKit">AppKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RandomAccessCollection.html">RandomAccessCollection</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AddressProtocol.html">AddressProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Address.html">Address</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Card.html">Card</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Expiration.html">Expiration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FinixCredentials.html">FinixCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FinixError.html">FinixError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FinixError/Code.html">– Code</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:17FinixPaymentSheet11MinimalCardV">MinimalCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TokenResponse.html">TokenResponse</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17FinixPaymentSheet9BasicCarda">BasicCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17FinixPaymentSheet12CompleteCarda">CompleteCard</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:17FinixPaymentSheet11PartialCarda">PartialCard</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PaymentAction</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">PaymentAction</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PaymentAction</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>A class to manage showing the payment sheet</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC11credentials8delegate13configurationAcA0A11CredentialsV_AA0bD8Delegate_pSgAA0B15InputControllerC13ConfigurationVSgtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(credentials:delegate:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC11credentials8delegate13configurationAcA0A11CredentialsV_AA0bD8Delegate_pSgAA0B15InputControllerC13ConfigurationVSgtcfc">init(credentials:<wbr>delegate:<wbr>configuration:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">credentials</span><span class="p">:</span> <span class="kt"><a href="../Structs/FinixCredentials.html">FinixCredentials</a></span><span class="p">,</span>
+            <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC13configurationAA0B15InputControllerC13ConfigurationVvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC13configurationAA0B15InputControllerC13ConfigurationVvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="o">.</span><span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC8delegateAA0bD8Delegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC8delegateAA0bD8Delegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PaymentActionDelegate.html">PaymentActionDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF">paymentSheet(style:<wbr>showCancelButton:<wbr>showCancelItem:<wbr>card:<wbr>showCountry:<wbr>address:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Prepare a  payment sheet controller.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">paymentSheet</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="o">.</span><span class="kt">Style</span><span class="p">,</span>
+                  <span class="nv">showCancelButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel button by default */</span>
+                  <span class="nv">showCancelItem</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel item by default because it assumes modal presentation */</span>
+                  <span class="nv">card</span><span class="p">:</span> <span class="kt"><a href="../Structs/Card.html">Card</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">showCountry</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                  <span class="nv">address</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AddressProtocol.html">AddressProtocol</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UI style see <code><a href="../Classes/PaymentInputController/Style.html">PaymentInputController.Style</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showCancelButton</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>show a cancel button along with submit</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showCancelItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>add a navigation item for cancel</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>card</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional prefilled card data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showCountry</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shows the country dropdown</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional prefilled address</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC7present4from07paymentC08animatedySo16UIViewControllerC_AA0b5InputJ0CSbtF"></a>
+                    <a name="//apple_ref/swift/Method/present(from:paymentSheet:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC7present4from07paymentC08animatedySo16UIViewControllerC_AA0b5InputJ0CSbtF">present(from:<wbr>paymentSheet:<wbr>animated:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Modally present a payment sheet that was created with <code><a href="../Classes/PaymentAction.html#/s:17FinixPaymentSheet0B6ActionC07paymentC05style16showCancelButton0gH4Item4card0G7Country7addressAA0B15InputControllerCAL5StyleO_S2bAA4CardVSgSbAA15AddressProtocol_pSgtF">paymentSheet(style:showCancelButton:showCancelItem:card:showCountry:address:)</a></code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="n">from</span> <span class="nv">presenter</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">paymentSheet</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC04bankbC016showCancelButton0fG4Item11accountTypeAA0B15InputControllerCSb_SbAA011BankAccountK0OSgtF"></a>
+                    <a name="//apple_ref/swift/Method/bankPaymentSheet(showCancelButton:showCancelItem:accountType:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC04bankbC016showCancelButton0fG4Item11accountTypeAA0B15InputControllerCSb_SbAA011BankAccountK0OSgtF">bankPaymentSheet(showCancelButton:<wbr>showCancelItem:<wbr>accountType:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">bankPaymentSheet</span><span class="p">(</span><span class="nv">showCancelButton</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel button by default */</span>
+                      <span class="nv">showCancelItem</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* show cancel item by default because it assumes modal presentation */</span>
+                      <span class="nv">accountType</span><span class="p">:</span> <span class="kt"><a href="../Enums/BankAccountType.html">BankAccountType</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC10didSucceed17paymentController10instrumentyAA0b5InputH0C_AA13TokenResponseVtF"></a>
+                    <a name="//apple_ref/swift/Method/didSucceed(paymentController:instrument:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC10didSucceed17paymentController10instrumentyAA0b5InputH0C_AA13TokenResponseVtF">didSucceed(paymentController:<wbr>instrument:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSucceed</span><span class="p">(</span><span class="nv">paymentController</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="p">,</span> <span class="nv">instrument</span><span class="p">:</span> <span class="kt"><a href="../Structs/TokenResponse.html">TokenResponse</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC9didCancel17paymentControlleryAA0b5InputH0C_tF"></a>
+                    <a name="//apple_ref/swift/Method/didCancel(paymentController:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC9didCancel17paymentControlleryAA0b5InputH0C_tF">didCancel(paymentController:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didCancel</span><span class="p">(</span><span class="nv">paymentController</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17FinixPaymentSheet0B6ActionC7didFail17paymentController5erroryAA0b5InputH0C_s5Error_ptF"></a>
+                    <a name="//apple_ref/swift/Method/didFail(paymentController:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17FinixPaymentSheet0B6ActionC7didFail17paymentController5erroryAA0b5InputH0C_s5Error_ptF">didFail(paymentController:<wbr>error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didFail</span><span class="p">(</span><span class="nv">paymentController</span><span class="p">:</span> <span class="kt"><a href="../Classes/PaymentInputController.html">PaymentInputController</a></span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="https://developers.finixpayments.com" target="_blank" rel="external noopener">Finix Payments</a>. All rights reserved. (Last updated: 2023-10-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
