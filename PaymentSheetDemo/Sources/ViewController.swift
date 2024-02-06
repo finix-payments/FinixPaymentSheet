@@ -19,11 +19,12 @@ class ViewController: UIViewController {
         paymentSDK = .init(credentials: credentials)
 
         // Provide your own branding
+        // NOTE: provide both light and dark appearance!
         let logo: UIImage? = #imageLiteral(resourceName: "FinixLogo")
         let branding: PaymentInputController.Branding = .init(image: logo, title: "Daphne’s Corner")
 
         // Set up configuration
-        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize", showsCancelButton: true)
+        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize", showsCancelButton: false)
 
         // Designate a delegate
         paymentSDK.delegate = self
@@ -56,17 +57,14 @@ extension ViewController {
     }
 }
 
+// TODO: Show success and failure in a controller with a UITextView to allow selection.
 extension ViewController: PaymentActionDelegate {
     func didSucceed(paymentController: PaymentInputController, instrument: TokenResponse) {
         debugPrint("got TokenizedCard: \(paymentController),\(instrument)")
-        let successAlert = UIAlertController(title: "Card Tokenized", message: "Card is \(instrument)", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        successAlert.addAction(okAction)
 
-        let presenting = paymentController.presentingViewController
-        paymentController.dismiss(animated: true) {
-            presenting?.present(successAlert, animated: true)
-        }
+        let resultController = ResultViewController()
+        resultController.result = .success(instrument)
+        paymentController.navigationController?.pushViewController(resultController, animated: true)
     }
 
     func didCancel(paymentController _: PaymentInputController) {
@@ -77,15 +75,8 @@ extension ViewController: PaymentActionDelegate {
     func didFail(paymentController: PaymentInputController, error: Error) {
         debugPrint("failed to process with error: \(error)")
 
-        let failureAlert = UIAlertController(title: "Card Tokenized",
-                                             message: "Card failed: \(error)",
-                                             preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default)
-        failureAlert.addAction(okAction)
-
-        let presenting = paymentController.presentingViewController
-        paymentController.dismiss(animated: true) {
-            presenting?.present(failureAlert, animated: true)
-        }
+        let resultController = ResultViewController()
+        resultController.result = .error(error)
+        paymentController.navigationController?.pushViewController(resultController, animated: true)
     }
 }
