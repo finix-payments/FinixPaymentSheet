@@ -17,7 +17,6 @@
 		B6F4F72DD74E30505503B4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B7841DDD4867272BFF42E /* AppDelegate.swift */; };
 		C1AE1FFCB0AFA4D399A52270 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90554DDC0968BDB734A4CB1 /* ResultViewController.swift */; };
 		EF86EFABE6E09D7386750C2D /* AppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FD23869E4633A571B4DC2 /* AppNavigationViewController.swift */; };
-		FC73235EA19202230A1022F9 /* Assets2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 016B9CC8A2ED162BABB9C057 /* Assets2.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,7 +34,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		016B9CC8A2ED162BABB9C057 /* Assets2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets2.xcassets; sourceTree = "<group>"; };
 		234698F6022DC5BCE130041D /* PaymentSheetDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PaymentSheetDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA67CD52E6CC23FEB7CD6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35B25E7C5F64A4C8C9F3F5B1 /* PaymentSheetDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PaymentSheetDemo.entitlements; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				3B600D8C7AA4D68AECB492B6 /* Assets.xcassets */,
-				016B9CC8A2ED162BABB9C057 /* Assets2.xcassets */,
 				F9526B7F080C00D446EC249D /* LaunchScreen.storyboard */,
 				379F9E227426098E52017ABD /* Main.storyboard */,
 				35B25E7C5F64A4C8C9F3F5B1 /* PaymentSheetDemo.entitlements */,
@@ -170,7 +167,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A7A83A24F1DE7DC774BC617 /* Assets.xcassets in Resources */,
-				FC73235EA19202230A1022F9 /* Assets2.xcassets in Resources */,
 				A14A0A76B7BF55D51FE54EB6 /* LaunchScreen.storyboard in Resources */,
 				778B24700FC35CDF43922183 /* Main.storyboard in Resources */,
 			);
@@ -281,7 +277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",
@@ -292,7 +288,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.10;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finixpayments.PaymentSheetDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +301,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\".\"",
@@ -316,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.9.10;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finixpayments.PaymentSheetDemo;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

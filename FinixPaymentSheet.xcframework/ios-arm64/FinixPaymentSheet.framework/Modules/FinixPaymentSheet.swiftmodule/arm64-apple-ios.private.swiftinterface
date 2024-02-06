@@ -47,6 +47,21 @@ public typealias PartialCard = FinixPaymentSheet.Card
 public typealias CompleteCard = FinixPaymentSheet.Card
 public struct MinimalCard {
 }
+public enum BankAccountType : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case personalChecking
+  case personalSavings
+  case businessChecking
+  case businessSavings
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FinixPaymentSheet.BankAccountType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [FinixPaymentSheet.BankAccountType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
 extension Swift.RandomAccessCollection {
   public func bisectToFirstIndex(where predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.Index?
 }
@@ -62,6 +77,7 @@ public struct TokenResponse : Swift.Decodable {
 }
 public enum PaymentInstrumentType : Swift.String, Swift.Codable {
   case card
+  case bank
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -122,6 +138,9 @@ extension FinixPaymentSheet.PaymentAction {
   public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
   public func present(from presenter: UIKit.UIViewController, paymentSheet: FinixPaymentSheet.PaymentInputController, animated: Swift.Bool = true)
 }
+extension FinixPaymentSheet.PaymentAction {
+  public func bankPaymentSheet(showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, accountType: FinixPaymentSheet.BankAccountType? = nil) -> FinixPaymentSheet.PaymentInputController
+}
 extension FinixPaymentSheet.PaymentAction : FinixPaymentSheet.PaymentActionDelegate {
   public func didSucceed(paymentController: FinixPaymentSheet.PaymentInputController, instrument: FinixPaymentSheet.TokenResponse)
   public func didCancel(paymentController: FinixPaymentSheet.PaymentInputController)
@@ -138,7 +157,16 @@ extension FinixPaymentSheet.PaymentInputController {
     case partial
     case basic
     case minimal
+    case basicBank
     public static func == (a: FinixPaymentSheet.PaymentInputController.Style, b: FinixPaymentSheet.PaymentInputController.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum ACHStyle {
+    case basic
+    public static func == (a: FinixPaymentSheet.PaymentInputController.ACHStyle, b: FinixPaymentSheet.PaymentInputController.ACHStyle) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
@@ -181,6 +209,9 @@ extension UIKit.UIColor {
   convenience public init(r u8r: Swift.UInt8, g u8g: Swift.UInt8, b u8b: Swift.UInt8, a u8a: Swift.UInt8 = 0xFF)
   convenience public init(int32 hex: Swift.UInt32)
 }
+extension FinixPaymentSheet.BankAccountType : Swift.Equatable {}
+extension FinixPaymentSheet.BankAccountType : Swift.Hashable {}
+extension FinixPaymentSheet.BankAccountType : Swift.RawRepresentable {}
 extension FinixPaymentSheet.PaymentInstrumentType : Swift.Equatable {}
 extension FinixPaymentSheet.PaymentInstrumentType : Swift.Hashable {}
 extension FinixPaymentSheet.PaymentInstrumentType : Swift.RawRepresentable {}
@@ -191,3 +222,5 @@ extension FinixPaymentSheet.FinixAPIEndpoint : Swift.Equatable {}
 extension FinixPaymentSheet.FinixAPIEndpoint : Swift.Hashable {}
 extension FinixPaymentSheet.PaymentInputController.Style : Swift.Equatable {}
 extension FinixPaymentSheet.PaymentInputController.Style : Swift.Hashable {}
+extension FinixPaymentSheet.PaymentInputController.ACHStyle : Swift.Equatable {}
+extension FinixPaymentSheet.PaymentInputController.ACHStyle : Swift.Hashable {}
