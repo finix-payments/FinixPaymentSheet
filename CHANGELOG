@@ -1,1 +1,9 @@
+0.9.8 - Styling and presentation changes
+  -add different payment sheet styles:
+    - minimal
+    - partial
+    - basic
+    - complete
+  - allow right bar button to be optional to support navigation push presentation
+  - update demo app to expose new functionality
 0.9.4.2 — add `environment` to `FinixCredentials` to select between Live and Sandbox
