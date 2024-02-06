@@ -324,28 +324,28 @@
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 76,
+      "line": 78,
       "symbol": "PaymentAction.bankPaymentSheet(showCancelButton:showCancelItem:accountType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 91,
+      "line": 93,
       "symbol": "PaymentAction.didSucceed(paymentController:instrument:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 95,
+      "line": 97,
       "symbol": "PaymentAction.didCancel(paymentController:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentAction/PaymentAction.swift",
-      "line": 99,
+      "line": 101,
       "symbol": "PaymentAction.didFail(paymentController:error:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -477,22 +477,211 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 11,
+      "symbol": "ColorThemeProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 12,
+      "symbol": "ColorThemeProtocol.surface",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 13,
+      "symbol": "ColorThemeProtocol.logoText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 14,
+      "symbol": "ColorThemeProtocol.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 15,
+      "symbol": "ColorThemeProtocol.errorContainer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 16,
+      "symbol": "ColorThemeProtocol.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 17,
+      "symbol": "ColorThemeProtocol.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 18,
+      "symbol": "ColorThemeProtocol.placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 19,
+      "symbol": "ColorThemeProtocol.errorLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 20,
+      "symbol": "ColorThemeProtocol.tokenizeButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 21,
+      "symbol": "ColorThemeProtocol.tokenizeButtonText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 22,
+      "symbol": "ColorThemeProtocol.cancelButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 23,
+      "symbol": "ColorThemeProtocol.cancelButtonText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 44,
+      "symbol": "ColorTheme",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 45,
+      "symbol": "ColorTheme.surface",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 46,
+      "symbol": "ColorTheme.logoText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 47,
+      "symbol": "ColorTheme.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 48,
+      "symbol": "ColorTheme.errorContainer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 49,
+      "symbol": "ColorTheme.container",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 50,
+      "symbol": "ColorTheme.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 51,
+      "symbol": "ColorTheme.placeholder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 52,
+      "symbol": "ColorTheme.errorLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 53,
+      "symbol": "ColorTheme.tokenizeButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 54,
+      "symbol": "ColorTheme.tokenizeButtonText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 55,
+      "symbol": "ColorTheme.cancelButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 56,
+      "symbol": "ColorTheme.cancelButtonText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Styling.swift",
+      "line": 59,
+      "symbol": "ColorTheme.default",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 137,
+      "line": 140,
       "symbol": "PaymentInputController.config",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 193,
+      "line": 197,
       "symbol": "PaymentInputController.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jack/work/Finix/PaymentSheet/Sources/PaymentInputController/PaymentInputController.swift",
-      "line": 196,
+      "line": 200,
       "symbol": "PaymentInputController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

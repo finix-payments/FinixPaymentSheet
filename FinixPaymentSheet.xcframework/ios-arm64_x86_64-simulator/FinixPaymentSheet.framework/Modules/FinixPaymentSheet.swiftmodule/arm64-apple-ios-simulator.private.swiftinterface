@@ -127,7 +127,7 @@ public class PaymentAction {
   @objc deinit
 }
 extension FinixPaymentSheet.PaymentAction {
-  public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
+  public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, theme: any FinixPaymentSheet.ColorThemeProtocol = ColorTheme.default, showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
   public func present(from presenter: UIKit.UIViewController, paymentSheet: FinixPaymentSheet.PaymentInputController, animated: Swift.Bool = true)
 }
 extension FinixPaymentSheet.PaymentAction {
@@ -175,6 +175,36 @@ extension FinixPaymentSheet.PaymentInputController {
     public let branding: FinixPaymentSheet.PaymentInputController.Branding
     public let buttonTitle: Swift.String
   }
+}
+public protocol ColorThemeProtocol : Swift.Equatable {
+  var surface: UIKit.UIColor { get }
+  var logoText: UIKit.UIColor { get }
+  var text: UIKit.UIColor { get }
+  var errorContainer: UIKit.UIColor { get }
+  var container: UIKit.UIColor { get }
+  var label: UIKit.UIColor { get }
+  var placeholder: UIKit.UIColor { get }
+  var errorLabel: UIKit.UIColor { get }
+  var tokenizeButton: UIKit.UIColor { get }
+  var tokenizeButtonText: UIKit.UIColor { get }
+  var cancelButton: UIKit.UIColor { get }
+  var cancelButtonText: UIKit.UIColor { get }
+}
+public struct ColorTheme : FinixPaymentSheet.ColorThemeProtocol {
+  public var surface: UIKit.UIColor
+  public var logoText: UIKit.UIColor
+  public var text: UIKit.UIColor
+  public var errorContainer: UIKit.UIColor
+  public var container: UIKit.UIColor
+  public var label: UIKit.UIColor
+  public var placeholder: UIKit.UIColor
+  public var errorLabel: UIKit.UIColor
+  public var tokenizeButton: UIKit.UIColor
+  public var tokenizeButtonText: UIKit.UIColor
+  public var cancelButton: UIKit.UIColor
+  public var cancelButtonText: UIKit.UIColor
+  public static let `default`: FinixPaymentSheet.ColorTheme
+  public static func == (a: FinixPaymentSheet.ColorTheme, b: FinixPaymentSheet.ColorTheme) -> Swift.Bool
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaymentInputController : UIKit.UITableViewController {
   @_Concurrency.MainActor(unsafe) public var config: FinixPaymentSheet.PaymentInputController.Configuration? {
