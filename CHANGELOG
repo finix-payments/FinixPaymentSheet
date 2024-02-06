@@ -1,3 +1,7 @@
+0.9.9.1 country updates
+  - update country list
+  - use 3 character country codes
+  - change "Zip Code" to "Postal Code"
 0.9.9 - API changes
   - add showCancelButton
   - clean up demo
