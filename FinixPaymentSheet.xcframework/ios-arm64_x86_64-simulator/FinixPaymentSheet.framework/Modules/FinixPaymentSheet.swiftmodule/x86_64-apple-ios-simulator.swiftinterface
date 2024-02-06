@@ -119,7 +119,7 @@ public class PaymentAction {
   @objc deinit
 }
 extension FinixPaymentSheet.PaymentAction {
-  public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
+  public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
   public func present(from presenter: UIKit.UIViewController, paymentSheet: FinixPaymentSheet.PaymentInputController, animated: Swift.Bool = true)
 }
 extension FinixPaymentSheet.PaymentAction : FinixPaymentSheet.PaymentActionDelegate {
@@ -150,11 +150,10 @@ extension FinixPaymentSheet.PaymentInputController {
     public init(image: UIKit.UIImage? = nil, title: Swift.String? = nil)
   }
   public struct Configuration {
-    public init(title: Swift.String?, branding: FinixPaymentSheet.PaymentInputController.Branding, buttonTitle: Swift.String, showsCancelButton: Swift.Bool)
+    public init(title: Swift.String?, branding: FinixPaymentSheet.PaymentInputController.Branding, buttonTitle: Swift.String)
     public let title: Swift.String?
     public let branding: FinixPaymentSheet.PaymentInputController.Branding
     public let buttonTitle: Swift.String
-    public let showsCancelButton: Swift.Bool
   }
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaymentInputController : UIKit.UITableViewController {

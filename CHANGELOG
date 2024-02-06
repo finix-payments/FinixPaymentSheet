@@ -1,3 +1,7 @@
+0.9.9 - API changes
+  - add showCancelButton
+  - clean up demo
+  - add docs
 0.9.8 - Styling and presentation changes
   -add different payment sheet styles:
     - minimal
