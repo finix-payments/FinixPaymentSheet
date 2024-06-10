@@ -387,98 +387,98 @@
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 49,
+      "line": 50,
       "symbol": "PaymentInputController.Style.complete",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 50,
+      "line": 51,
       "symbol": "PaymentInputController.Style.partial",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 51,
+      "line": 52,
       "symbol": "PaymentInputController.Style.basic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 52,
+      "line": 53,
       "symbol": "PaymentInputController.Style.minimal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 53,
+      "line": 54,
       "symbol": "PaymentInputController.Style.basicBank",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 57,
+      "line": 58,
       "symbol": "PaymentInputController.ACHStyle",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 58,
+      "line": 59,
       "symbol": "PaymentInputController.ACHStyle.basic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 159,
+      "line": 162,
       "symbol": "PaymentInputController.Branding",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 160,
+      "line": 163,
       "symbol": "PaymentInputController.Branding.init(image:title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 170,
+      "line": 173,
       "symbol": "PaymentInputController.Configuration",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 171,
+      "line": 174,
       "symbol": "PaymentInputController.Configuration.init(title:branding:buttonTitle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 177,
+      "line": 180,
       "symbol": "PaymentInputController.Configuration.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 178,
+      "line": 181,
       "symbol": "PaymentInputController.Configuration.branding",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/fraser.moore/Code/PaymentSheet/Sources/PaymentInputController/PaymentInputController+Configuration.swift",
-      "line": 179,
+      "line": 182,
       "symbol": "PaymentInputController.Configuration.buttonTitle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
