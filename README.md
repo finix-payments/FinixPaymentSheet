@@ -13,7 +13,7 @@ This requires:
 
 ## Usage
 
-Link against the provided `FinixPaymentShee.xcframework` directly by adding to your project.
+Link against the provided `FinixPaymentSheet.xcframework` directly by adding to your project.
 
 The Demo project is set up to use the provided framework. It is commented to illustrate its usage.
    
