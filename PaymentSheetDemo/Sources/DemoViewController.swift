@@ -30,7 +30,7 @@ let customTheme: ColorTheme = {
     myTheme.tokenizeButton = .lightGray
     myTheme.tokenizeButtonText = .purple
 
-    myTheme.errorLabel = .red
+    myTheme.errorLabel = .blue
     myTheme.logoText = .green
     return myTheme
 }()
