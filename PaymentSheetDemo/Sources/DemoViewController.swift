@@ -19,9 +19,9 @@ let BRANDING_NAME = "Daphne's Corner"
 let customTheme: ColorTheme = {
     var myTheme: ColorTheme = .default
 
-    myTheme.surface = .brown
+    myTheme.surface = .white
 
-    myTheme.label = .red
+    myTheme.label = .black
     myTheme.text = .green
     myTheme.container = .yellow
     myTheme.cancelButton = .magenta
@@ -30,7 +30,7 @@ let customTheme: ColorTheme = {
     myTheme.tokenizeButton = .lightGray
     myTheme.tokenizeButtonText = .purple
 
-    myTheme.errorLabel = .blue
+    myTheme.errorLabel = .red
     myTheme.logoText = .green
     return myTheme
 }()
