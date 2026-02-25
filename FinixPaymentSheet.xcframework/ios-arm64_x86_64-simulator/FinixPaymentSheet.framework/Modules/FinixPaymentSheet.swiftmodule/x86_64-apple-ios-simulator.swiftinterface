@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FinixPaymentSheet
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import DeveloperToolsSupport
 import Foundation
 import Swift
@@ -12,14 +12,18 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 public protocol AddressProtocol {
   var line1: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var line2: Swift.String? { get }
+  #endif
   var city: Swift.String { get }
   var region: Swift.String { get }
   var postalCode: Swift.String { get }
   var country: Swift.String { get }
 }
 public struct Address : FinixPaymentSheet.AddressProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(line1: Swift.String, line2: Swift.String? = nil, city: Swift.String, region: Swift.String, postalCode: Swift.String, country: Swift.String)
+  #endif
   public let line1: Swift.String
   public let line2: Swift.String?
   public let city: Swift.String
@@ -47,7 +51,9 @@ public enum BankAccountType : Swift.String, Swift.Codable, Swift.CaseIterable {
   case personalSavings
   case businessChecking
   case businessSavings
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [FinixPaymentSheet.BankAccountType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [FinixPaymentSheet.BankAccountType] {
@@ -58,7 +64,9 @@ public enum BankAccountType : Swift.String, Swift.Codable, Swift.CaseIterable {
   }
 }
 extension Swift.RandomAccessCollection {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func bisectToFirstIndex(where predicate: (Self.Element) throws -> Swift.Bool) rethrows -> Self.Index?
+  #endif
 }
 public struct TokenResponse : Swift.Decodable {
   public let id: Swift.String
@@ -73,7 +81,9 @@ public struct TokenResponse : Swift.Decodable {
 public enum PaymentInstrumentType : Swift.String, Swift.Codable {
   case card
   case bank
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -81,7 +91,9 @@ public enum PaymentInstrumentType : Swift.String, Swift.Codable {
 }
 public enum ISOCurrency : Swift.String, Swift.Decodable {
   case USD
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -124,18 +136,24 @@ public struct FinixError : Swift.Error {
   }
 }
 public class PaymentAction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(credentials: FinixPaymentSheet.FinixCredentials, delegate: (any FinixPaymentSheet.PaymentActionDelegate)? = nil, configuration: FinixPaymentSheet.PaymentInputController.Configuration? = nil)
+  #endif
   public var configuration: FinixPaymentSheet.PaymentInputController.Configuration
   public var localization: FinixPaymentSheet.PaymentInputController.Localization
   weak public var delegate: (any FinixPaymentSheet.PaymentActionDelegate)?
   @objc deinit
 }
 extension FinixPaymentSheet.PaymentAction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func paymentSheet(style: FinixPaymentSheet.PaymentInputController.Style, theme: any FinixPaymentSheet.ColorThemeProtocol = ColorTheme.default, showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, card: FinixPaymentSheet.Card? = nil, showCountry: Swift.Bool = false, address: (any FinixPaymentSheet.AddressProtocol)? = nil) -> FinixPaymentSheet.PaymentInputController
+  #endif
   public func present(from presenter: UIKit.UIViewController, paymentSheet: FinixPaymentSheet.PaymentInputController, animated: Swift.Bool = true)
 }
 extension FinixPaymentSheet.PaymentAction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func bankPaymentSheet(showCancelButton: Swift.Bool = true, showCancelItem: Swift.Bool = true, accountType: FinixPaymentSheet.BankAccountType? = nil) -> FinixPaymentSheet.PaymentInputController
+  #endif
 }
 extension FinixPaymentSheet.PaymentAction : FinixPaymentSheet.PaymentActionDelegate {
   public func didSucceed(paymentController: FinixPaymentSheet.PaymentInputController, instrument: FinixPaymentSheet.TokenResponse)
@@ -171,10 +189,14 @@ extension FinixPaymentSheet.PaymentInputController {
 }
 extension FinixPaymentSheet.PaymentInputController {
   public struct Branding {
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(image: UIKit.UIImage? = nil, title: Swift.String? = nil)
+    #endif
   }
   public struct Configuration {
+    #if compiler(>=5.3) && $NonescapableTypes
     public init(title: Swift.String?, branding: FinixPaymentSheet.PaymentInputController.Branding, buttonTitle: Swift.String)
+    #endif
     public let title: Swift.String?
     public let branding: FinixPaymentSheet.PaymentInputController.Branding
     public let buttonTitle: Swift.String
@@ -312,8 +334,12 @@ public struct ColorTheme : FinixPaymentSheet.ColorThemeProtocol {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func tableView(_: UIKit.UITableView, numberOfRowsInSection _: Swift.Int) -> Swift.Int
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection _: Swift.Int) -> UIKit.UIView?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  #endif
   @objc deinit
 }
 extension FinixPaymentSheet.PaymentInputController : UIKit.UITextFieldDelegate {
