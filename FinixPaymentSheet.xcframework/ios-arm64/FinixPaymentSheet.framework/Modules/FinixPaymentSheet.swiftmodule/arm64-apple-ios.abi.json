@@ -3667,6 +3667,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -13565,6 +13572,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
             "name": "UITraitChangeObservable",
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
@@ -13991,6 +14005,13 @@
             "printedName": "Sendable",
             "usr": "s:s8SendableP",
             "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
           }
         ]
       },
@@ -14539,84 +14560,84 @@
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1912,
+      "offset": 2200,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "FloatLiteral",
-      "offset": 2044,
+      "offset": 2332,
       "length": 4,
       "value": "14.0"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2207,
+      "offset": 2495,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "FloatLiteral",
-      "offset": 2286,
+      "offset": 2574,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2347,
+      "offset": 2635,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2362,
+      "offset": 2650,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2532,
+      "offset": 2820,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "FloatLiteral",
-      "offset": 2611,
+      "offset": 2899,
       "length": 4,
       "value": "30.0"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2672,
+      "offset": 2960,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2687,
+      "offset": 2975,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2747,
+      "offset": 3035,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/View\/ButtonFooterView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2763,
+      "offset": 3051,
       "length": 4,
       "value": "true"
     },
@@ -15801,12 +15822,12 @@
       "kind": "FloatLiteral",
       "offset": 221,
       "length": 3,
-      "value": "0.9"
+      "value": "1.0"
     },
     {
       "filePath": "\/Users\/israrul.haque\/Development\/PaymentSheet\/Sources\/Presentation\/PaymentSheetPresentationController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4244,
+      "offset": 4224,
       "length": 5,
       "value": "false"
     },
