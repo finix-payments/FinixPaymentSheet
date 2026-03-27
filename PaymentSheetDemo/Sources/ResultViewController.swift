@@ -65,4 +65,13 @@ class ResultViewController: UIViewController {
             }
         }
     }
+
+    // Objective-C compatible methods
+    @objc func setResult(success instrument: TokenResponse) {
+        result = .success(instrument)
+    }
+
+    @objc func setResult(error: Error) {
+        result = .error(error)
+    }
 }
