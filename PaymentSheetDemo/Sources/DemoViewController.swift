@@ -99,6 +99,8 @@ class DemoViewController: UITableViewController {
             return BankStyle.allCases.count
         case .configuration:
             return DemoSwitch.allCases.count
+        case .objc:
+            return 1
         }
     }
 
@@ -136,6 +138,13 @@ class DemoViewController: UITableViewController {
             }
             cell.textLabel?.text = "Bank"
             return cell
+        case .objc:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DemoCell.Identifier) as? DemoCell else {
+                fatalError("Expected DemoCell")
+            }
+            cell.textLabel?.text = "Open Objective-C Demo"
+            cell.accessoryType = .disclosureIndicator
+            return cell
         }
     }
 
@@ -164,6 +173,8 @@ class DemoViewController: UITableViewController {
             return
         case .bank:
             modalPresentBankSheet()
+        case .objc:
+            openObjCDemo()
         }
     }
 
@@ -177,6 +188,7 @@ enum DemoCellSection: Int, CaseIterable {
     case push
     case configuration
     case bank
+    case objc
 
     var title: String {
         switch self {
@@ -188,6 +200,8 @@ enum DemoCellSection: Int, CaseIterable {
             return "Configuration"
         case .bank:
             return "Bank Modal Presentation"
+        case .objc:
+            return "Objective-C Integration"
         }
     }
 }
@@ -250,7 +264,7 @@ extension DemoViewController {
                                                         showCountry: showCountry)
         paymentController.delegate = self
         // present the configured payment controller
-        paymentSDK.present(from: self, paymentSheet: paymentController)
+        paymentSDK.present(from: self, paymentSheet: paymentController, animated: true)
     }
 
     // push a payment sheet onto the parent navigation controller
@@ -275,7 +289,7 @@ extension DemoViewController {
                                                             showCancelItem: true)
         paymentController.delegate = self
         // present the configured payment controller
-        paymentSDK.present(from: self, paymentSheet: paymentController)
+        paymentSDK.present(from: self, paymentSheet: paymentController, animated: true)
     }
 }
 
@@ -328,6 +342,11 @@ extension DemoViewController {
     @IBAction
     func showCancelButtonValueChanged(_ switchView: UISwitch) {
         showCancelButton = switchView.isOn
+    }
+
+    private func openObjCDemo() {
+        let objcDemo = ObjCDemoViewController()
+        navigationController?.pushViewController(objcDemo, animated: true)
     }
 }
 

@@ -282,6 +282,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -305,17 +306,78 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+/// Ecapsulate the environment
+/// Note: Changed to Int enum for Objective-C compatibility
+typedef SWIFT_ENUM(NSInteger, FinixAPIEndpoint, open) {
+  FinixAPIEndpointSandbox = 0,
+  FinixAPIEndpointLive = 1,
+};
+
+@class NSString;
+/// Client credentials. Currently only need ApplicationId
+/// Note: Changed from struct to class for Objective-C compatibility
+SWIFT_CLASS("_TtC17FinixPaymentSheet16FinixCredentials")
+@interface FinixCredentials : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull applicationId;
+@property (nonatomic, readonly) enum FinixAPIEndpoint environment;
+- (nonnull instancetype)initWithApplicationId:(NSString * _Nonnull)applicationId environment:(enum FinixAPIEndpoint)environment OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ISOCurrency, open) {
+  ISOCurrencyUSD = 0,
+};
+
+@protocol PaymentActionDelegate;
+@class Configuration;
+@class Localization;
+enum PaymentInputControllerStyle : NSInteger;
+@class PaymentInputController;
+@class UIViewController;
+/// A class to manage showing the payment sheet
+/// Note: Added @objc for Objective-C compatibility
+SWIFT_CLASS("_TtC17FinixPaymentSheet13PaymentAction")
+@interface PaymentAction : NSObject
+- (nonnull instancetype)initWithCredentials:(FinixCredentials * _Nonnull)credentials delegate:(id <PaymentActionDelegate> _Nullable)delegate configuration:(Configuration * _Nullable)configuration OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) Configuration * _Nonnull configuration;
+@property (nonatomic, strong) Localization * _Nonnull localization;
+@property (nonatomic, weak) id <PaymentActionDelegate> _Nullable delegate;
+/// Objective-C compatible wrapper for creating a payment sheet
+- (PaymentInputController * _Nonnull)paymentSheetWithStyle:(enum PaymentInputControllerStyle)style showCancelButton:(BOOL)showCancelButton showCancelItem:(BOOL)showCancelItem SWIFT_WARN_UNUSED_RESULT;
+/// Objective-C compatible wrapper for creating a bank payment sheet
+- (PaymentInputController * _Nonnull)bankPaymentSheetWithCancelButton:(BOOL)showCancelButton cancelItem:(BOOL)showCancelItem SWIFT_WARN_UNUSED_RESULT;
+/// Modally present a payment sheet
+- (void)presentFrom:(UIViewController * _Nonnull)presenter paymentSheet:(PaymentInputController * _Nonnull)paymentSheet animated:(BOOL)animated;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class TokenResponse;
+SWIFT_PROTOCOL("_TtP17FinixPaymentSheet21PaymentActionDelegate_")
+@protocol PaymentActionDelegate
+- (void)didSucceedWithPaymentController:(PaymentInputController * _Nonnull)paymentController instrument:(TokenResponse * _Nonnull)instrument;
+- (void)didCancelWithPaymentController:(PaymentInputController * _Nonnull)paymentController;
+- (void)didFailWithPaymentController:(PaymentInputController * _Nonnull)paymentController error:(NSError * _Nonnull)error;
+@end
+
+@interface PaymentAction (SWIFT_EXTENSION(FinixPaymentSheet)) <PaymentActionDelegate>
+- (void)didSucceedWithPaymentController:(PaymentInputController * _Nonnull)paymentController instrument:(TokenResponse * _Nonnull)instrument;
+- (void)didCancelWithPaymentController:(PaymentInputController * _Nonnull)paymentController;
+- (void)didFailWithPaymentController:(PaymentInputController * _Nonnull)paymentController error:(NSError * _Nonnull)error;
+@end
+
 @class NSCoder;
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
 @class UIView;
-@class NSString;
 @class NSBundle;
 /// A controller for user input of financial instrument data.
 SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 @interface PaymentInputController : UITableViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+@property (nonatomic, weak) id <PaymentActionDelegate> _Nullable delegate;
 - (void)viewDidLoad;
 /// :nodoc:
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
@@ -333,6 +395,157 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+/// A structure to provide:
+/// <ul>
+///   <li>
+///     field titles
+///   </li>
+///   <li>
+///     field placeholders
+///   </li>
+///   <li>
+///     error/validation messages
+///     When creating you may selectively declare or override messages as needed. The default English string is provided.
+///     Note: Changed from struct to class for Objective-C compatibility
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController12Localization")
+@interface Localization : NSObject
+- (nonnull instancetype)initWithCardNumberInvalidCharacters:(NSString * _Nonnull)cardNumberInvalidCharacters invalidCardNumber:(NSString * _Nonnull)invalidCardNumber selectBankAccountType:(NSString * _Nonnull)selectBankAccountType invalidSelection:(NSString * _Nonnull)invalidSelection expiryEnterMonthAndYear:(NSString * _Nonnull)expiryEnterMonthAndYear expiryInvalidCharacters:(NSString * _Nonnull)expiryInvalidCharacters expiryMonthRange:(NSString * _Nonnull)expiryMonthRange expiryYearFormat:(NSString * _Nonnull)expiryYearFormat expiryInThePast:(NSString * _Nonnull)expiryInThePast regionEnterState:(NSString * _Nonnull)regionEnterState invalidInput:(NSString * _Nonnull)invalidInput minimumLengthRequired:(NSString * _Nonnull)minimumLengthRequired nameTitle:(NSString * _Nonnull)nameTitle addressTitle:(NSString * _Nonnull)addressTitle addressLine2Title:(NSString * _Nonnull)addressLine2Title cityTitle:(NSString * _Nonnull)cityTitle regionTitle:(NSString * _Nonnull)regionTitle postalCodeTitle:(NSString * _Nonnull)postalCodeTitle cardNumberTitle:(NSString * _Nonnull)cardNumberTitle cardExpiryTitle:(NSString * _Nonnull)cardExpiryTitle cardCVVTitle:(NSString * _Nonnull)cardCVVTitle bankAccountNumberTitle:(NSString * _Nonnull)bankAccountNumberTitle bankRoutingNumberTitle:(NSString * _Nonnull)bankRoutingNumberTitle bankAccountTypeTitle:(NSString * _Nonnull)bankAccountTypeTitle countryRegionTitle:(NSString * _Nonnull)countryRegionTitle namePlaceholder:(NSString * _Nonnull)namePlaceholder addressPlaceholder:(NSString * _Nonnull)addressPlaceholder addressLine2Placeholder:(NSString * _Nonnull)addressLine2Placeholder cityPlaceholder:(NSString * _Nonnull)cityPlaceholder regionPlaceholder:(NSString * _Nonnull)regionPlaceholder postalCodePlaceholder:(NSString * _Nonnull)postalCodePlaceholder cardNumberPlaceholder:(NSString * _Nonnull)cardNumberPlaceholder cardExpiryPlaceholder:(NSString * _Nonnull)cardExpiryPlaceholder cardCVVPlaceholder:(NSString * _Nonnull)cardCVVPlaceholder bankAccountNumberPlaceholder:(NSString * _Nonnull)bankAccountNumberPlaceholder bankRoutingNumberPlaceholder:(NSString * _Nonnull)bankRoutingNumberPlaceholder bankAccountTypePlaceholder:(NSString * _Nonnull)bankAccountTypePlaceholder bankAccountPersonalChecking:(NSString * _Nonnull)bankAccountPersonalChecking bankAccountPersonalSavings:(NSString * _Nonnull)bankAccountPersonalSavings bankAccountBusinessChecking:(NSString * _Nonnull)bankAccountBusinessChecking bankAccountBusinessSavings:(NSString * _Nonnull)bankAccountBusinessSavings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+@class UIImage;
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController8Branding")
+@interface Branding : NSObject
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image title:(NSString * _Nullable)title OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) UIImage * _Nullable image;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController13Configuration")
+@interface Configuration : NSObject
+- (nonnull instancetype)initWithTitle:(NSString * _Nullable)title branding:(Branding * _Nonnull)branding buttonTitle:(NSString * _Nonnull)buttonTitle OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@property (nonatomic, readonly, strong) Branding * _Nonnull branding;
+@property (nonatomic, readonly, copy) NSString * _Nonnull buttonTitle;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) Configuration * _Nonnull default_;)
++ (Configuration * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+/// UI Configuration for the payment sheet.
+/// <ul>
+///   <li>
+///     complete:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///       <li>
+///         address
+///         <ul>
+///           <li>
+///             address ext
+///           </li>
+///           <li>
+///             city
+///           </li>
+///           <li>
+///             state
+///           </li>
+///           <li>
+///             zip code
+///           </li>
+///         </ul>
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     partial:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         zip code
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     basic:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     minimal:
+///     <ul>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///       <li>
+///         zip code
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+typedef SWIFT_ENUM_NAMED(NSInteger, PaymentInputControllerStyle, "Style", open) {
+  PaymentInputControllerStyleComplete = 0,
+  PaymentInputControllerStylePartial = 1,
+  PaymentInputControllerStyleBasic = 2,
+  PaymentInputControllerStyleMinimal = 3,
+  PaymentInputControllerStyleBasicBank = 4,
+};
+
 @class UITextField;
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
 /// :nodoc:
@@ -341,6 +554,34 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 /// :nodoc:
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, PaymentInstrumentType, open) {
+  PaymentInstrumentTypeCard = 0,
+  PaymentInstrumentTypeBank = 1,
+};
+
+@class NSDate;
+/// {
+/// “id” : “TKcHHcB9e1GrG3rifyfLEtoM”,
+/// “fingerprint” : “FPRrcobjtdU98gr4sjiqYR1Qg”,
+/// “created_at” : “2022-07-03T00:03:24.48Z”,
+/// “updated_at” : “2022-07-03T00:03:24.48Z”,
+/// “instrument_type” : “PAYMENT_CARD”,
+/// “expires_at” : “2022-07-04T00:03:24.48Z”,
+/// “currency” : “USD”
+/// }
+SWIFT_CLASS("_TtC17FinixPaymentSheet13TokenResponse")
+@interface TokenResponse : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull fingerprint;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull created;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull updated;
+@property (nonatomic, readonly) enum PaymentInstrumentType instrument;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull expires;
+@property (nonatomic, readonly) enum ISOCurrency isoCurrency;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 #endif
@@ -635,6 +876,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import Foundation;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -658,17 +900,78 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+/// Ecapsulate the environment
+/// Note: Changed to Int enum for Objective-C compatibility
+typedef SWIFT_ENUM(NSInteger, FinixAPIEndpoint, open) {
+  FinixAPIEndpointSandbox = 0,
+  FinixAPIEndpointLive = 1,
+};
+
+@class NSString;
+/// Client credentials. Currently only need ApplicationId
+/// Note: Changed from struct to class for Objective-C compatibility
+SWIFT_CLASS("_TtC17FinixPaymentSheet16FinixCredentials")
+@interface FinixCredentials : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull applicationId;
+@property (nonatomic, readonly) enum FinixAPIEndpoint environment;
+- (nonnull instancetype)initWithApplicationId:(NSString * _Nonnull)applicationId environment:(enum FinixAPIEndpoint)environment OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, ISOCurrency, open) {
+  ISOCurrencyUSD = 0,
+};
+
+@protocol PaymentActionDelegate;
+@class Configuration;
+@class Localization;
+enum PaymentInputControllerStyle : NSInteger;
+@class PaymentInputController;
+@class UIViewController;
+/// A class to manage showing the payment sheet
+/// Note: Added @objc for Objective-C compatibility
+SWIFT_CLASS("_TtC17FinixPaymentSheet13PaymentAction")
+@interface PaymentAction : NSObject
+- (nonnull instancetype)initWithCredentials:(FinixCredentials * _Nonnull)credentials delegate:(id <PaymentActionDelegate> _Nullable)delegate configuration:(Configuration * _Nullable)configuration OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, strong) Configuration * _Nonnull configuration;
+@property (nonatomic, strong) Localization * _Nonnull localization;
+@property (nonatomic, weak) id <PaymentActionDelegate> _Nullable delegate;
+/// Objective-C compatible wrapper for creating a payment sheet
+- (PaymentInputController * _Nonnull)paymentSheetWithStyle:(enum PaymentInputControllerStyle)style showCancelButton:(BOOL)showCancelButton showCancelItem:(BOOL)showCancelItem SWIFT_WARN_UNUSED_RESULT;
+/// Objective-C compatible wrapper for creating a bank payment sheet
+- (PaymentInputController * _Nonnull)bankPaymentSheetWithCancelButton:(BOOL)showCancelButton cancelItem:(BOOL)showCancelItem SWIFT_WARN_UNUSED_RESULT;
+/// Modally present a payment sheet
+- (void)presentFrom:(UIViewController * _Nonnull)presenter paymentSheet:(PaymentInputController * _Nonnull)paymentSheet animated:(BOOL)animated;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class TokenResponse;
+SWIFT_PROTOCOL("_TtP17FinixPaymentSheet21PaymentActionDelegate_")
+@protocol PaymentActionDelegate
+- (void)didSucceedWithPaymentController:(PaymentInputController * _Nonnull)paymentController instrument:(TokenResponse * _Nonnull)instrument;
+- (void)didCancelWithPaymentController:(PaymentInputController * _Nonnull)paymentController;
+- (void)didFailWithPaymentController:(PaymentInputController * _Nonnull)paymentController error:(NSError * _Nonnull)error;
+@end
+
+@interface PaymentAction (SWIFT_EXTENSION(FinixPaymentSheet)) <PaymentActionDelegate>
+- (void)didSucceedWithPaymentController:(PaymentInputController * _Nonnull)paymentController instrument:(TokenResponse * _Nonnull)instrument;
+- (void)didCancelWithPaymentController:(PaymentInputController * _Nonnull)paymentController;
+- (void)didFailWithPaymentController:(PaymentInputController * _Nonnull)paymentController error:(NSError * _Nonnull)error;
+@end
+
 @class NSCoder;
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
 @class UIView;
-@class NSString;
 @class NSBundle;
 /// A controller for user input of financial instrument data.
 SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 @interface PaymentInputController : UITableViewController
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)_ SWIFT_UNAVAILABLE;
+@property (nonatomic, weak) id <PaymentActionDelegate> _Nullable delegate;
 - (void)viewDidLoad;
 /// :nodoc:
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)_ SWIFT_WARN_UNUSED_RESULT;
@@ -686,6 +989,157 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+/// A structure to provide:
+/// <ul>
+///   <li>
+///     field titles
+///   </li>
+///   <li>
+///     field placeholders
+///   </li>
+///   <li>
+///     error/validation messages
+///     When creating you may selectively declare or override messages as needed. The default English string is provided.
+///     Note: Changed from struct to class for Objective-C compatibility
+///   </li>
+/// </ul>
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController12Localization")
+@interface Localization : NSObject
+- (nonnull instancetype)initWithCardNumberInvalidCharacters:(NSString * _Nonnull)cardNumberInvalidCharacters invalidCardNumber:(NSString * _Nonnull)invalidCardNumber selectBankAccountType:(NSString * _Nonnull)selectBankAccountType invalidSelection:(NSString * _Nonnull)invalidSelection expiryEnterMonthAndYear:(NSString * _Nonnull)expiryEnterMonthAndYear expiryInvalidCharacters:(NSString * _Nonnull)expiryInvalidCharacters expiryMonthRange:(NSString * _Nonnull)expiryMonthRange expiryYearFormat:(NSString * _Nonnull)expiryYearFormat expiryInThePast:(NSString * _Nonnull)expiryInThePast regionEnterState:(NSString * _Nonnull)regionEnterState invalidInput:(NSString * _Nonnull)invalidInput minimumLengthRequired:(NSString * _Nonnull)minimumLengthRequired nameTitle:(NSString * _Nonnull)nameTitle addressTitle:(NSString * _Nonnull)addressTitle addressLine2Title:(NSString * _Nonnull)addressLine2Title cityTitle:(NSString * _Nonnull)cityTitle regionTitle:(NSString * _Nonnull)regionTitle postalCodeTitle:(NSString * _Nonnull)postalCodeTitle cardNumberTitle:(NSString * _Nonnull)cardNumberTitle cardExpiryTitle:(NSString * _Nonnull)cardExpiryTitle cardCVVTitle:(NSString * _Nonnull)cardCVVTitle bankAccountNumberTitle:(NSString * _Nonnull)bankAccountNumberTitle bankRoutingNumberTitle:(NSString * _Nonnull)bankRoutingNumberTitle bankAccountTypeTitle:(NSString * _Nonnull)bankAccountTypeTitle countryRegionTitle:(NSString * _Nonnull)countryRegionTitle namePlaceholder:(NSString * _Nonnull)namePlaceholder addressPlaceholder:(NSString * _Nonnull)addressPlaceholder addressLine2Placeholder:(NSString * _Nonnull)addressLine2Placeholder cityPlaceholder:(NSString * _Nonnull)cityPlaceholder regionPlaceholder:(NSString * _Nonnull)regionPlaceholder postalCodePlaceholder:(NSString * _Nonnull)postalCodePlaceholder cardNumberPlaceholder:(NSString * _Nonnull)cardNumberPlaceholder cardExpiryPlaceholder:(NSString * _Nonnull)cardExpiryPlaceholder cardCVVPlaceholder:(NSString * _Nonnull)cardCVVPlaceholder bankAccountNumberPlaceholder:(NSString * _Nonnull)bankAccountNumberPlaceholder bankRoutingNumberPlaceholder:(NSString * _Nonnull)bankRoutingNumberPlaceholder bankAccountTypePlaceholder:(NSString * _Nonnull)bankAccountTypePlaceholder bankAccountPersonalChecking:(NSString * _Nonnull)bankAccountPersonalChecking bankAccountPersonalSavings:(NSString * _Nonnull)bankAccountPersonalSavings bankAccountBusinessChecking:(NSString * _Nonnull)bankAccountBusinessChecking bankAccountBusinessSavings:(NSString * _Nonnull)bankAccountBusinessSavings OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+@class UIImage;
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController8Branding")
+@interface Branding : NSObject
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image title:(NSString * _Nullable)title OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) UIImage * _Nullable image;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtCC17FinixPaymentSheet22PaymentInputController13Configuration")
+@interface Configuration : NSObject
+- (nonnull instancetype)initWithTitle:(NSString * _Nullable)title branding:(Branding * _Nonnull)branding buttonTitle:(NSString * _Nonnull)buttonTitle OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nullable title;
+@property (nonatomic, readonly, strong) Branding * _Nonnull branding;
+@property (nonatomic, readonly, copy) NSString * _Nonnull buttonTitle;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong, getter=default) Configuration * _Nonnull default_;)
++ (Configuration * _Nonnull)default SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet))
+@end
+
+/// UI Configuration for the payment sheet.
+/// <ul>
+///   <li>
+///     complete:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///       <li>
+///         address
+///         <ul>
+///           <li>
+///             address ext
+///           </li>
+///           <li>
+///             city
+///           </li>
+///           <li>
+///             state
+///           </li>
+///           <li>
+///             zip code
+///           </li>
+///         </ul>
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     partial:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         zip code
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     basic:
+///     <ul>
+///       <li>
+///         name
+///       </li>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///     </ul>
+///   </li>
+///   <li>
+///     minimal:
+///     <ul>
+///       <li>
+///         card number
+///       </li>
+///       <li>
+///         expiration date
+///       </li>
+///       <li>
+///         cvv
+///       </li>
+///       <li>
+///         zip code
+///       </li>
+///     </ul>
+///   </li>
+/// </ul>
+typedef SWIFT_ENUM_NAMED(NSInteger, PaymentInputControllerStyle, "Style", open) {
+  PaymentInputControllerStyleComplete = 0,
+  PaymentInputControllerStylePartial = 1,
+  PaymentInputControllerStyleBasic = 2,
+  PaymentInputControllerStyleMinimal = 3,
+  PaymentInputControllerStyleBasicBank = 4,
+};
+
 @class UITextField;
 @interface PaymentInputController (SWIFT_EXTENSION(FinixPaymentSheet)) <UITextFieldDelegate>
 /// :nodoc:
@@ -694,6 +1148,34 @@ SWIFT_CLASS("_TtC17FinixPaymentSheet22PaymentInputController")
 - (BOOL)textField:(UITextField * _Nonnull)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 /// :nodoc:
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, PaymentInstrumentType, open) {
+  PaymentInstrumentTypeCard = 0,
+  PaymentInstrumentTypeBank = 1,
+};
+
+@class NSDate;
+/// {
+/// “id” : “TKcHHcB9e1GrG3rifyfLEtoM”,
+/// “fingerprint” : “FPRrcobjtdU98gr4sjiqYR1Qg”,
+/// “created_at” : “2022-07-03T00:03:24.48Z”,
+/// “updated_at” : “2022-07-03T00:03:24.48Z”,
+/// “instrument_type” : “PAYMENT_CARD”,
+/// “expires_at” : “2022-07-04T00:03:24.48Z”,
+/// “currency” : “USD”
+/// }
+SWIFT_CLASS("_TtC17FinixPaymentSheet13TokenResponse")
+@interface TokenResponse : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull fingerprint;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull created;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull updated;
+@property (nonatomic, readonly) enum PaymentInstrumentType instrument;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull expires;
+@property (nonatomic, readonly) enum ISOCurrency isoCurrency;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 #endif
