@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # Includes full Objective-C and Swift support
 
   s.name                           = 'FinixPaymentSheet'
-  s.version                           = '1.0.9'
+  s.version                           = '1.0.10'
   s.summary                        = 'FinixPaymentSheet provides a convenient card tokenization UI for iOS with full Objective-C support.'
   s.description                    = <<-DESC
                                       FinixPaymentSheet is a native iOS SDK that provides:
