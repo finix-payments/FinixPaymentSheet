@@ -15,6 +15,14 @@ Or add it to your `Package.swift`:
 ```swift
 dependencies: [
     .package(url: "https://github.com/finix-payments/finix-paymentsheet-ios-sdk.git", from: "1.0.0")
+],
+targets: [
+    .target(
+        name: "YourApp",
+        dependencies: [
+            .product(name: "FinixPaymentSheet", package: "finix-paymentsheet-ios-sdk")
+        ]
+    )
 ]
 ```
 
@@ -196,8 +204,8 @@ The demo covers UIKit, SwiftUI and Objective-C integrations:
 
 ## Requirements
 
-- iOS 15.0+
-- Xcode 15.0+
+- iOS 15.0+ (the demo app itself targets iOS 15.6)
+- Xcode 26.6+
 
 ## Support
 
