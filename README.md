@@ -1,40 +1,32 @@
-# FinixPaymentSheet iOS SDK
+# FinixPaymentSheet Demo App
 
-Payment tokenization SDK for iOS with Swift and Objective-C support.
+Demo app for the FinixPaymentSheet iOS SDK — payment tokenization for iOS with Swift and Objective-C support.
+
+The SDK itself is distributed as a binary Swift package from [`finix-paymentsheet-ios-sdk`](https://github.com/finix-payments/finix-paymentsheet-ios-sdk). This repository contains only the demo app that consumes it.
 
 ## Installation
 
-### Option 1: Latest Version (Recommended)
+### Swift Package Manager
 
-Add to your `Podfile`:
+In Xcode, choose **File → Add Package Dependencies**, enter `https://github.com/finix-payments/finix-paymentsheet-ios-sdk`, and add the `FinixPaymentSheet` product to your app target.
 
-```ruby
-pod 'FinixPaymentSheet', :git => 'https://github.com/finix-payments/FinixPaymentSheet.git', :tag => 'v1.0.9'
+Or add it to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/finix-payments/finix-paymentsheet-ios-sdk.git", from: "1.0.0")
+]
 ```
 
-### Option 2: Direct Podspec URL
+See the SDK repository's [tags](https://github.com/finix-payments/finix-paymentsheet-ios-sdk/tags) for available versions.
 
-```ruby
-pod 'FinixPaymentSheet', :podspec => 'https://raw.githubusercontent.com/finix-payments/FinixPaymentSheet/main/FinixPaymentSheet.podspec'
-```
+### Migrating from CocoaPods
 
-Then run:
-```bash
-pod install
-```
-
-### Available Versions
-
-See [Releases](https://github.com/finix-payments/FinixPaymentSheet/releases) for all versions.
-
-To use a specific version:
-```ruby
-pod 'FinixPaymentSheet', :git => 'https://github.com/finix-payments/FinixPaymentSheet.git', :tag => 'v1.0.9'
-```
+CocoaPods is no longer published; v1.0.10 is the last pod release. Podfiles pinned to a `v1.0.x` tag of this repository keep resolving, but Podfiles that track `main` or the raw podspec URL no longer do. Remove the `FinixPaymentSheet` pod, run `pod install`, then add the Swift package as above — the module name is still `FinixPaymentSheet`, so imports don't change.
 
 ## SDK Integration
 
-After running `pod install`, the SDK is ready to use. **No bridging headers or additional setup required** - just import and start using.
+Once the package is added, the SDK is ready to use. **No bridging headers or additional setup required** - just import and start using.
 
 ### Swift Integration
 
@@ -186,11 +178,15 @@ PaymentInputController *bankSheet = [self.paymentAction
 - `PaymentInputControllerStyleMinimal` - Minimal card entry
 - `PaymentInputControllerStyleBasicBank` - Bank account (ACH) entry
 
-## Demo Implementation
+## Running the Demo
 
-A complete Objective-C demo implementation is available in this repository:
+Open `PaymentSheetDemo.xcodeproj` and run the `PaymentSheetDemo` scheme. Xcode resolves the SDK from the `main` branch of [`finix-paymentsheet-ios-sdk`](https://github.com/finix-payments/finix-paymentsheet-ios-sdk), at the revision pinned in `Package.resolved`; use **File → Packages → Update to Latest Package Versions** to pick up the newest build.
 
-- **[ObjCDemoViewController.m](PaymentSheetDemo/Sources/ObjCDemoViewController.m)** - Full working example showing:
+The demo covers UIKit, SwiftUI and Objective-C integrations:
+
+- **[DemoViewController.swift](PaymentSheetDemo/Sources/DemoViewController.swift)** - UIKit (Swift)
+- **[SwiftUIDemoView.swift](PaymentSheetDemo/Sources/SwiftUIDemoView.swift)** - SwiftUI
+- **[ObjCDemoViewController.m](PaymentSheetDemo/Sources/ObjCDemoViewController.m)** - Objective-C, showing:
   - SDK initialization and configuration
   - Modal and push presentation styles
   - Card and bank account (ACH) payments
@@ -198,12 +194,10 @@ A complete Objective-C demo implementation is available in this repository:
   - Delegate implementation
   - Error handling
 
-This demo shows real-world usage patterns and best practices for integrating the SDK in Objective-C projects.
-
 ## Requirements
 
-- iOS 12.0+
-- Xcode 14.0+
+- iOS 15.0+
+- Xcode 15.0+
 
 ## Support
 
