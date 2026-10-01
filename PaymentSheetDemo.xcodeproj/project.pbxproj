@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0035A8052FCD55290071D695 /* SwiftUIDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035A8042FCD55290071D695 /* SwiftUIDemoView.swift */; };
 		00B827472F7710C60042C941 /* ObjCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B827452F7710C60042C941 /* ObjCDemoViewController.m */; };
-		00B8274A2FCD50000042C941 /* FinixPaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 00B8274B2FCD50000042C941 /* FinixPaymentSheet */; };
 		083F0005919FF3A701A9C5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585792AE0E6374199E6548E /* SceneDelegate.swift */; };
 		778B24700FC35CDF43922183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379F9E227426098E52017ABD /* Main.storyboard */; };
 		7A7A83A24F1DE7DC774BC617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B600D8C7AA4D68AECB492B6 /* Assets.xcassets */; };
@@ -17,6 +16,10 @@
 		A14A0A76B7BF55D51FE54EB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9526B7F080C00D446EC249D /* LaunchScreen.storyboard */; };
 		B6F4F72DD74E30505503B4CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B7841DDD4867272BFF42E /* AppDelegate.swift */; };
 		C1AE1FFCB0AFA4D399A52270 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90554DDC0968BDB734A4CB1 /* ResultViewController.swift */; };
+		D1D60899306F0EBF00DFF786 /* FinixPaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = D1D60898306F0EBF00DFF786 /* FinixPaymentSheet */; };
+		D1D6089C306F0EF000DFF786 /* DatadogCore in Frameworks */ = {isa = PBXBuildFile; productRef = D1D6089B306F0EF000DFF786 /* DatadogCore */; };
+		D1D6089E306F0EF000DFF786 /* DatadogCrashReporting in Frameworks */ = {isa = PBXBuildFile; productRef = D1D6089D306F0EF000DFF786 /* DatadogCrashReporting */; };
+		D1D608A0306F0EF000DFF786 /* DatadogLogs in Frameworks */ = {isa = PBXBuildFile; productRef = D1D6089F306F0EF000DFF786 /* DatadogLogs */; };
 		EF86EFABE6E09D7386750C2D /* AppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FD23869E4633A571B4DC2 /* AppNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00B8274A2FCD50000042C941 /* FinixPaymentSheet in Frameworks */,
+				D1D6089E306F0EF000DFF786 /* DatadogCrashReporting in Frameworks */,
+				D1D60899306F0EBF00DFF786 /* FinixPaymentSheet in Frameworks */,
+				D1D6089C306F0EF000DFF786 /* DatadogCore in Frameworks */,
+				D1D608A0306F0EF000DFF786 /* DatadogLogs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +160,8 @@
 			);
 			mainGroup = F61ADCF03D362A35494C1849;
 			packageReferences = (
-				0035A63B2FCD3D4D0071D695 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */,
+				D1D60897306F0EBF00DFF786 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */,
+				D1D6089A306F0EF000DFF786 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */,
 			);
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,21 +411,44 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0035A63B2FCD3D4D0071D695 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */ = {
+		D1D60897306F0EBF00DFF786 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/finix-payments/finix-paymentsheet-ios-sdk";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.0.11;
+			};
+		};
+		D1D6089A306F0EF000DFF786 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Datadog/dd-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		00B8274B2FCD50000042C941 /* FinixPaymentSheet */ = {
+		D1D60898306F0EBF00DFF786 /* FinixPaymentSheet */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0035A63B2FCD3D4D0071D695 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */;
+			package = D1D60897306F0EBF00DFF786 /* XCRemoteSwiftPackageReference "finix-paymentsheet-ios-sdk" */;
 			productName = FinixPaymentSheet;
+		};
+		D1D6089B306F0EF000DFF786 /* DatadogCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1D6089A306F0EF000DFF786 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
+			productName = DatadogCore;
+		};
+		D1D6089D306F0EF000DFF786 /* DatadogCrashReporting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1D6089A306F0EF000DFF786 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
+			productName = DatadogCrashReporting;
+		};
+		D1D6089F306F0EF000DFF786 /* DatadogLogs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1D6089A306F0EF000DFF786 /* XCRemoteSwiftPackageReference "dd-sdk-ios" */;
+			productName = DatadogLogs;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

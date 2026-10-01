@@ -75,12 +75,16 @@ class YourViewController: UIViewController {
 **Step 3: Implement the delegate**
 ```swift
 extension YourViewController: PaymentActionDelegate {
-    func paymentAction(_ action: PaymentAction, didSucceedWith response: TokenResponse) {
-        print("✅ Token: \(response.id)")
+    func didSucceed(paymentController: PaymentInputController, instrument: TokenResponse) {
+        print("✅ Token: \(instrument.id)")
         // Handle successful tokenization
     }
 
-    func paymentAction(_ action: PaymentAction, didFailWith error: Error) {
+    func didCancel(paymentController: PaymentInputController) {
+        // Handle cancellation
+    }
+
+    func didFail(paymentController: PaymentInputController, error: Error) {
         print("❌ Error: \(error.localizedDescription)")
         // Handle error
     }
@@ -111,7 +115,8 @@ extension YourViewController: PaymentActionDelegate {
     // 1. Create credentials
     FinixCredentials *credentials = [[FinixCredentials alloc]
         initWithApplicationId:@"YOUR_APP_ID"
-        environment:FinixAPIEndpointSandbox];
+        environment:FinixAPIEndpointSandbox
+        merchantId:nil];
 
     // 2. Initialize PaymentAction
     self.paymentAction = [[PaymentAction alloc]
@@ -136,14 +141,18 @@ extension YourViewController: PaymentActionDelegate {
 ```objective-c
 #pragma mark - PaymentActionDelegate
 
-- (void)paymentAction:(PaymentAction *)action
-       didSucceedWith:(TokenResponse *)response {
-    NSLog(@"✅ Token: %@", response.id);
+- (void)didSucceedWithPaymentController:(PaymentInputController *)paymentController
+                             instrument:(TokenResponse *)instrument {
+    NSLog(@"✅ Token: %@", instrument.id);
     // Handle successful tokenization
 }
 
-- (void)paymentAction:(PaymentAction *)action
-         didFailWith:(NSError *)error {
+- (void)didCancelWithPaymentController:(PaymentInputController *)paymentController {
+    // Handle cancellation
+}
+
+- (void)didFailWithPaymentController:(PaymentInputController *)paymentController
+                                error:(NSError *)error {
     NSLog(@"❌ Error: %@", error.localizedDescription);
     // Handle error
 }
@@ -161,7 +170,8 @@ Branding *branding = [[Branding alloc]
 Configuration *config = [[Configuration alloc]
     initWithTitle:@"Card Entry"
     branding:branding
-    buttonTitle:@"Submit"];
+    buttonTitle:@"Submit"
+    enableCardScanning:YES];
 
 PaymentAction *paymentAction = [[PaymentAction alloc]
     initWithCredentials:credentials
