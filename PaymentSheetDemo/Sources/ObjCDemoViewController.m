@@ -68,7 +68,8 @@ typedef NS_ENUM(NSInteger, ObjCDemoRow) {
     // 1. Create credentials
     FinixCredentials *credentials = [[FinixCredentials alloc]
         initWithApplicationId:kApplicationId
-        environment:FinixAPIEndpointSandbox];
+        environment:FinixAPIEndpointSandbox
+        merchantId:nil];
 
     // 2. Create branding
     UIImage *logo = [UIImage imageNamed:@"FinixLogo"];
