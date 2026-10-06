@@ -1,5 +1,5 @@
 {
-  "originHash" : "8d974bd24d82f4d5d557ba64d8b9d52d46ed5885330bdf776e7a18858dfe514c",
+  "originHash" : "bff22b90fd400800dcf8874cf2fb8ac4e4cabb9b70271be44efc4d7fc03a0d78",
   "pins" : [
     {
       "identity" : "dd-sdk-ios",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/finix-payments/finix-paymentsheet-ios-sdk",
       "state" : {
-        "revision" : "bde97b2f75c48c2c66bf3985d06873dfaddb6c31",
-        "version" : "1.0.11"
+        "revision" : "01f1de47d1de22489096ae875f72cb768acec3e8",
+        "version" : "1.0.12"
       }
     },
     {

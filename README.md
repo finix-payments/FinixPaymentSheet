@@ -14,7 +14,7 @@ Or add it to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/finix-payments/finix-paymentsheet-ios-sdk.git", from: "1.0.0")
+    .package(url: "https://github.com/finix-payments/finix-paymentsheet-ios-sdk.git", from: "1.0.12")
 ],
 targets: [
     .target(
@@ -198,7 +198,7 @@ PaymentInputController *bankSheet = [self.paymentAction
 
 ## Running the Demo
 
-Open `PaymentSheetDemo.xcodeproj` and run the `PaymentSheetDemo` scheme. Xcode resolves the SDK from [`finix-paymentsheet-ios-sdk`](https://github.com/finix-payments/finix-paymentsheet-ios-sdk) up to the next minor version from 1.0.11, at the version pinned in `Package.resolved`; use **File → Packages → Update to Latest Package Versions** to pick up newer 1.0.x releases.
+Open `PaymentSheetDemo.xcodeproj` and run the `PaymentSheetDemo` scheme. Xcode resolves the SDK from [`finix-paymentsheet-ios-sdk`](https://github.com/finix-payments/finix-paymentsheet-ios-sdk) up to the next minor version from 1.0.12, at the version pinned in `Package.resolved`; use **File → Packages → Update to Latest Package Versions** to pick up newer 1.0.x releases.
 
 The demo covers UIKit, SwiftUI and Objective-C integrations:
 
