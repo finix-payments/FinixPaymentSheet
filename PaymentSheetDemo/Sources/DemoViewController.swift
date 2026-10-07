@@ -9,8 +9,11 @@ import FinixPaymentSheet
 import UIKit
 
 // Provide your own Application Id
+// This is a sample sandbox Application ID for testing
+// For production, configure your credentials via the gear icon (settings)
 let APPLICATION_ID = "APgPDQrLD52TYvqazjHJJchM"
 
+// Branding assets for demo
 let BRANDING_LOGO: UIImage? = #imageLiteral(resourceName: "FinixLogo")
 let BRANDING_NAME = "Daphne's Corner"
 
@@ -43,6 +46,9 @@ enum ThemeOption: Int, CaseIterable {
 class DemoViewController: UITableViewController {
     var paymentSDK: PaymentAction!
 
+    // Configuration storage
+    private let config = DemoConfiguration.shared
+
     // Provide your own branding
     // NOTE: provide both light and dark appearances!
     private let branding: PaymentInputController.Branding = .init(image: BRANDING_LOGO, title: BRANDING_NAME)
@@ -56,22 +62,60 @@ class DemoViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        setupPaymentSDK()
+        super.viewDidLoad()
 
         navigationItem.title = "Card Payment Sheet Demo"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "gearshape"),
+            style: .plain,
+            target: self,
+            action: #selector(openConfiguration)
+        )
 
-        super.viewDidLoad()
         tableView.register(DemoCell.self, forCellReuseIdentifier: DemoCell.Identifier)
         tableView.register(DemoSwitchCell.self, forCellReuseIdentifier: DemoSwitchCell.Identifier)
+
+        setupPaymentSDK()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    // MARK: - Configuration
+
+    @objc private func openConfiguration() {
+        let configVC = ConfigurationViewController { [weak self] in
+            self?.setupPaymentSDK()
+            self?.tableView.reloadData()
+        }
+        navigationController?.pushViewController(configVC, animated: true)
     }
 
     // set up PaymentSDK
     private func setupPaymentSDK() {
-        let credentials = FinixCredentials(applicationId: APPLICATION_ID, environment: .Sandbox)
+        // Use credentials from configuration
+        let credentials = config.finixCredentials
         paymentSDK = .init(credentials: credentials)
 
-        // Set up configuration with card scanning
-        paymentSDK.configuration = .init(title: "Card Entry", branding: branding, buttonTitle: "Tokenize", enableCardScanning: enableCardScanning)
+        // Convert empty strings to nil for optional credentials
+        let merchantId = config.merchantId.isEmpty ? nil : config.merchantId
+        let apiUsername = config.apiUsername.isEmpty ? nil : config.apiUsername
+        let apiPassword = config.apiPassword.isEmpty ? nil : config.apiPassword
+
+        // Set up configuration with card scanning and 3DS
+        paymentSDK.configuration = PaymentInputController.Configuration(
+            title: "Card Entry",
+            branding: branding,
+            buttonTitle: "Tokenize",
+            enableCardScanning: enableCardScanning,
+            threeDSConfiguration: threeDSConfiguration,
+            merchantId: merchantId,
+            apiUsername: apiUsername,
+            apiPassword: apiPassword,
+            amount: 9900, // $99.00 for testing
+            currency: "USD"
+        )
 
         /** NOTE: to provide your own customized text (e.g. localization), you may override the default localization.
           E.g
@@ -148,6 +192,9 @@ class DemoViewController: UITableViewController {
                 case .enableCardScanning:
                     cell.switchControl.isOn = enableCardScanning
                     cell.switchControl.addTarget(self, action: #selector(enableCardScanningValueChanged(_:)), for: .valueChanged)
+                case .enable3DS:
+                    cell.switchControl.isOn = enable3DS
+                    cell.switchControl.addTarget(self, action: #selector(enable3DSValueChanged(_:)), for: .valueChanged)
                 }
                 cell.textLabel?.text = demoSwitch.title
                 return cell
@@ -219,10 +266,19 @@ class DemoViewController: UITableViewController {
     private var showCountry: Bool = false
     private var showCancelButton: Bool = false
     private var enableCardScanning: Bool = true
+    private var enable3DS: Bool = false // 3DS disabled by default
     private var selectedTheme: ThemeOption = .finixCheckoutTheme
 
     private var customTheme: any ColorThemeProtocol {
         selectedTheme.theme
+    }
+
+    /// URL scheme for 3DS redirect (must match Info.plist)
+    private let threeDSRedirectScheme = "finixpaymentsheetdemo"
+
+    /// Create 3DS configuration with current enabled state
+    private var threeDSConfiguration: ThreeDSConfiguration? {
+        config.threeDSConfiguration(redirectScheme: threeDSRedirectScheme, isEnabled: enable3DS)
     }
 }
 
@@ -287,6 +343,7 @@ enum DemoSwitch: Int, CaseIterable {
     case showCountry
     case showCancelButton
     case enableCardScanning
+    case enable3DS
 
     var title: String {
         switch self {
@@ -296,6 +353,8 @@ enum DemoSwitch: Int, CaseIterable {
             return "Show Country"
         case .enableCardScanning:
             return "Enable Card Scanning"
+        case .enable3DS:
+            return "Enable 3DS"
         }
     }
 }
@@ -316,6 +375,12 @@ enum DemoSelector: Int, CaseIterable {
 extension DemoViewController {
     // present a payment sheet modally
     private func modalPresentSheet(style: PaymentInputController.Style) {
+        // Check if Application ID is configured
+        guard config.hasBasicCredentials else {
+            showMissingApplicationIdAlert()
+            return
+        }
+
         // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
         let paymentController = paymentSDK.paymentSheet(style: style,
                                                         theme: customTheme,
@@ -329,6 +394,12 @@ extension DemoViewController {
 
     // push a payment sheet onto the parent navigation controller
     private func navigationPushSheet(style: PaymentInputController.Style) {
+        // Check if Application ID is configured
+        guard config.hasBasicCredentials else {
+            showMissingApplicationIdAlert()
+            return
+        }
+
         let paymentSheet = paymentSDK.paymentSheet(style: style,
                                                    theme: customTheme,
                                                    showCancelButton: showCancelButton,
@@ -337,12 +408,31 @@ extension DemoViewController {
         paymentSheet.delegate = self
         navigationController?.pushViewController(paymentSheet, animated: true)
     }
+
+    private func showMissingApplicationIdAlert() {
+        let alert = UIAlertController(
+            title: "Application ID Required",
+            message: "Please configure your Application ID to use payment tokenization.",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Configure", style: .default) { [weak self] _ in
+            self?.openConfiguration()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
 }
 
 // MARK: Bank PaymentSheet presentation
 
 extension DemoViewController {
     private func modalPresentBankSheet() {
+        // Check if Application ID is configured
+        guard config.hasBasicCredentials else {
+            showMissingApplicationIdAlert()
+            return
+        }
+
         // prepare a payment sheet with configurable cancel button, navigation cancel item, and country selection
         // optionally specify the default bank account type
         let paymentController = paymentSDK.bankPaymentSheet(showCancelButton: showCancelButton,
@@ -356,22 +446,19 @@ extension DemoViewController {
 // MARK: PaymentActionDelegate
 
 extension DemoViewController: PaymentActionDelegate {
-    // display result
-    func didSucceed(paymentController: PaymentInputController, instrument: TokenResponse) {
-        debugPrint("got TokenizedCard: \(paymentController),\(instrument)")
+    func didSucceed(paymentController: PaymentInputController, response: PaymentSheetResponse) {
+        debugPrint("got PaymentSheetResponse: \(paymentController),\(response)")
 
         let resultController = ResultViewController()
-        resultController.result = .success(instrument)
-        debugPrint("""
-        Got a token response with:
-                id: \(instrument.id)
-                fingerprint: \(instrument.fingerprint)
-                created: \(instrument.created)
-                updated: \(instrument.updated)
-                instrument: \(instrument.instrument)
-                expires: \(instrument.expires)
-                isoCurrency: \(instrument.isoCurrency)
-        """)
+        resultController.result = .success(response.tokenizedResponse)
+
+        // Check for 3DS response
+        if let threeDSResponse = response.threeDSResponse {
+            resultController.threeDSSessionId = threeDSResponse.sessionId
+            debugPrint("Token: \(response.tokenizedResponse.id), 3DS Session: \(threeDSResponse.sessionId)")
+        } else {
+            debugPrint("Token: \(response.tokenizedResponse.id)")
+        }
 
         paymentController.navigationController?.pushViewController(resultController, animated: true)
     }
@@ -385,8 +472,8 @@ extension DemoViewController: PaymentActionDelegate {
         debugPrint("failed to process with error: \(error)")
 
         let resultController = ResultViewController()
-        if let error = error as? FinixError {
-            debugPrint("FinixError with \(error.message), code: \(error.code)")
+        if let finixError = error as? FinixError {
+            debugPrint("FinixError: \(finixError.message), code: \(finixError.code)")
         }
         resultController.result = .error(error)
         paymentController.navigationController?.pushViewController(resultController, animated: true)
@@ -407,12 +494,54 @@ extension DemoViewController {
     @IBAction
     func enableCardScanningValueChanged(_ switchView: UISwitch) {
         enableCardScanning = switchView.isOn
+        updatePaymentSDKConfiguration()
+    }
+
+    @IBAction
+    func enable3DSValueChanged(_ switchView: UISwitch) {
+        // Check if 3DS credentials are configured when enabling
+        if switchView.isOn && !config.has3DSCredentials {
+            // Show alert and revert switch
+            switchView.setOn(false, animated: true)
+            show3DSConfigurationAlert()
+            return
+        }
+
+        enable3DS = switchView.isOn
+        updatePaymentSDKConfiguration()
+    }
+
+    private func show3DSConfigurationAlert() {
+        let alert = UIAlertController(
+            title: "3DS Configuration Required",
+            message: "Please configure your Merchant ID, API Username, and API Password to enable 3DS.",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Configure", style: .default) { [weak self] _ in
+            self?.openConfiguration()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
+    }
+
+    private func updatePaymentSDKConfiguration() {
+        // Convert empty strings to nil for optional credentials
+        let merchantId = config.merchantId.isEmpty ? nil : config.merchantId
+        let apiUsername = config.apiUsername.isEmpty ? nil : config.apiUsername
+        let apiPassword = config.apiPassword.isEmpty ? nil : config.apiPassword
+
         // Update the PaymentSDK configuration
-        paymentSDK.configuration = .init(
+        paymentSDK.configuration = PaymentInputController.Configuration(
             title: "Card Entry",
             branding: branding,
             buttonTitle: "Tokenize",
-            enableCardScanning: enableCardScanning
+            enableCardScanning: enableCardScanning,
+            threeDSConfiguration: threeDSConfiguration,
+            merchantId: merchantId,
+            apiUsername: apiUsername,
+            apiPassword: apiPassword,
+            amount: 9900, // $99.00 for testing
+            currency: "USD"
         )
     }
 
@@ -476,3 +605,4 @@ class DemoSwitchCell: UITableViewCell {
         switchControl.removeTarget(nil, action: nil, for: .valueChanged)
     }
 }
+

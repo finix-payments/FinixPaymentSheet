@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0035A8052FCD55290071D695 /* SwiftUIDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035A8042FCD55290071D695 /* SwiftUIDemoView.swift */; };
 		00B827472F7710C60042C941 /* ObjCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B827452F7710C60042C941 /* ObjCDemoViewController.m */; };
+		00C0CF162FCD55290071D696 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0CF172FCD55290071D697 /* ConfigurationViewController.swift */; };
+		00DE00CF2FCD55290071D698 /* DemoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DE00CF2FCD55290071D699 /* DemoConfiguration.swift */; };
 		083F0005919FF3A701A9C5A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585792AE0E6374199E6548E /* SceneDelegate.swift */; };
 		778B24700FC35CDF43922183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379F9E227426098E52017ABD /* Main.storyboard */; };
 		7A7A83A24F1DE7DC774BC617 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B600D8C7AA4D68AECB492B6 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		0035A8042FCD55290071D695 /* SwiftUIDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoView.swift; sourceTree = "<group>"; };
+		00C0CF172FCD55290071D697 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		00DE00CF2FCD55290071D699 /* DemoConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoConfiguration.swift; sourceTree = "<group>"; };
 		00B827442F7710C60042C941 /* ObjCDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCDemoViewController.h; sourceTree = "<group>"; };
 		00B827452F7710C60042C941 /* ObjCDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCDemoViewController.m; sourceTree = "<group>"; };
 		00B827462F7710C60042C941 /* PaymentSheetDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaymentSheetDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				00B827462F7710C60042C941 /* PaymentSheetDemo-Bridging-Header.h */,
 				497B7841DDD4867272BFF42E /* AppDelegate.swift */,
 				F20FD23869E4633A571B4DC2 /* AppNavigationViewController.swift */,
+				00C0CF172FCD55290071D697 /* ConfigurationViewController.swift */,
+				00DE00CF2FCD55290071D699 /* DemoConfiguration.swift */,
 				65B5D77CCAC9249D483F29A6 /* DemoViewController.swift */,
 				0035A8042FCD55290071D695 /* SwiftUIDemoView.swift */,
 				E90554DDC0968BDB734A4CB1 /* ResultViewController.swift */,
@@ -184,6 +190,8 @@
 			files = (
 				B6F4F72DD74E30505503B4CD /* AppDelegate.swift in Sources */,
 				00B827472F7710C60042C941 /* ObjCDemoViewController.m in Sources */,
+				00C0CF162FCD55290071D696 /* ConfigurationViewController.swift in Sources */,
+				00DE00CF2FCD55290071D698 /* DemoConfiguration.swift in Sources */,
 				0035A8052FCD55290071D695 /* SwiftUIDemoView.swift in Sources */,
 				EF86EFABE6E09D7386750C2D /* AppNavigationViewController.swift in Sources */,
 				8221F1F1C392B35CA4744C17 /* DemoViewController.swift in Sources */,

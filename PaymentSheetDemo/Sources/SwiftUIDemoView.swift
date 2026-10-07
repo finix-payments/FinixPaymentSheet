@@ -12,7 +12,6 @@ import SwiftUI
 ///
 /// This demo shows how to integrate PaymentSheet into a SwiftUI app using the `.paymentSheet()` modifier.
 /// It demonstrates both inline and push-based navigation patterns.
-@available(iOS 15.0, *)
 struct SwiftUIDemoView: View {
     // MARK: - State
 
@@ -27,20 +26,35 @@ struct SwiftUIDemoView: View {
 
     // MARK: - Configuration
 
-    private let credentials = FinixCredentials(
-        applicationId: APPLICATION_ID,
-        environment: .Sandbox
-    )
+    /// URL scheme for 3DS redirect (must match Info.plist)
+    private let threeDSRedirectScheme = "finixpaymentsheetdemo"
+
+    /// Use credentials from DemoConfiguration
+    private var credentials: FinixCredentials {
+        DemoConfiguration.shared.finixCredentials
+    }
 
     private var configuration: PaymentInputController.Configuration {
-        .init(
+        let config = DemoConfiguration.shared
+        // Convert empty strings to nil for optional credentials
+        let merchantId = config.merchantId.isEmpty ? nil : config.merchantId
+        let apiUsername = config.apiUsername.isEmpty ? nil : config.apiUsername
+        let apiPassword = config.apiPassword.isEmpty ? nil : config.apiPassword
+
+        return .init(
             title: "SwiftUI Card Entry",
             branding: PaymentInputController.Branding(
                 image: BRANDING_LOGO,
                 title: BRANDING_NAME
             ),
             buttonTitle: "Tokenize",
-            enableCardScanning: cardScanning
+            enableCardScanning: cardScanning,
+            threeDSConfiguration: config.threeDSConfiguration(redirectScheme: threeDSRedirectScheme),
+            merchantId: merchantId,
+            apiUsername: apiUsername,
+            apiPassword: apiPassword,
+            amount: config.amount > 0 ? config.amount : 9900,
+            currency: "USD"
         )
     }
 
@@ -98,6 +112,33 @@ struct SwiftUIDemoView: View {
                 }
             }
 
+            // Configuration Status Section
+            Section("Configuration Status") {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: DemoConfiguration.shared.hasBasicCredentials ? "checkmark.circle.fill" : "xmark.circle.fill")
+                            .foregroundColor(DemoConfiguration.shared.hasBasicCredentials ? .green : .red)
+                        Text("Application ID")
+                            .font(.caption)
+                    }
+
+                    HStack {
+                        Image(systemName: DemoConfiguration.shared.has3DSCredentials ? "checkmark.circle.fill" : "xmark.circle.fill")
+                            .foregroundColor(DemoConfiguration.shared.has3DSCredentials ? .green : .orange)
+                        Text("3DS Credentials (Optional)")
+                            .font(.caption)
+                    }
+
+                    if !DemoConfiguration.shared.hasBasicCredentials {
+                        Text("Configure credentials using the gear icon in the main demo screen")
+                            .font(.caption)
+                            .foregroundColor(.red)
+                            .padding(.top, 4)
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+
             // Info Section
             Section("Info") {
                 VStack(alignment: .leading, spacing: 8) {
@@ -105,15 +146,15 @@ struct SwiftUIDemoView: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
 
-                    Text("• Push style: Pushes onto navigation stack")
+                    Text("* Push style: Pushes onto navigation stack")
                         .font(.caption)
                         .foregroundColor(.secondary)
 
-                    Text("• Modal style: Presents as custom modal sheet")
+                    Text("* Modal style: Presents as custom modal sheet")
                         .font(.caption)
                         .foregroundColor(.secondary)
 
-                    Text("• Uses FinixCheckoutTheme1 for consistent styling")
+                    Text("* Uses FinixCheckoutTheme1 for consistent styling")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -132,17 +173,21 @@ struct SwiftUIDemoView: View {
                 showCancelButton: showCancelButton,
                 showCancelItem: showCancelItem,
                 showCountry: showCountry,
-                onSuccess: { token in
-                    lastToken = "✅ Token: \(token.id)"
+                onSuccess: { response in
+                    if let threeDSResponse = response.threeDSResponse {
+                        lastToken = "Token: \(response.tokenizedResponse.id)\n3DS Session: \(threeDSResponse.sessionId)"
+                    } else {
+                        lastToken = "Token: \(response.tokenizedResponse.id)"
+                    }
                     lastError = nil
                 },
                 onCancel: {
                     lastToken = nil
-                    lastError = "❌ Cancelled by user"
+                    lastError = "Cancelled by user"
                 },
                 onFailure: { error in
                     lastToken = nil
-                    lastError = "❌ Error: \(error.localizedDescription)"
+                    lastError = "Error: \(error.localizedDescription)"
                 }
             )
         )
@@ -159,7 +204,6 @@ struct SwiftUIDemoView: View {
 // MARK: - Presentation Modifier
 
 /// Wrapper to conditionally apply payment sheet based on presentation style
-@available(iOS 15.0, *)
 private struct PaymentSheetPresentationModifier: ViewModifier {
     @Binding var isPresented: Bool
     let presentationStyle: SwiftUIDemoView.PresentationStyle
@@ -170,7 +214,7 @@ private struct PaymentSheetPresentationModifier: ViewModifier {
     let showCancelButton: Bool
     let showCancelItem: Bool
     let showCountry: Bool
-    let onSuccess: (TokenResponse) -> Void
+    let onSuccess: (PaymentSheetResponse) -> Void
     let onCancel: () -> Void
     let onFailure: (Error) -> Void
 
@@ -237,7 +281,7 @@ private struct PaymentSheetModalBridge: UIViewControllerRepresentable {
     let showCancelButton: Bool
     let showCancelItem: Bool
     let showCountry: Bool
-    let onSuccess: (TokenResponse) -> Void
+    let onSuccess: (PaymentSheetResponse) -> Void
     let onCancel: () -> Void
     let onFailure: (Error) -> Void
 
@@ -292,7 +336,7 @@ private class ModalBridgeViewController: UIViewController {
     var showCancelItem: Bool = true
     var showCountry: Bool = false
 
-    var onSuccess: ((TokenResponse) -> Void)?
+    var onSuccess: ((PaymentSheetResponse) -> Void)?
     var onCancel: (() -> Void)?
     var onFailure: ((Error) -> Void)?
     var onDismiss: (() -> Void)?
@@ -332,13 +376,13 @@ private class ModalBridgeViewController: UIViewController {
 
 @available(iOS 13.0, *)
 extension ModalBridgeViewController: PaymentActionDelegate {
-    func didSucceed(paymentController _: PaymentInputController, instrument: TokenResponse) {
+    func didSucceed(paymentController _: PaymentInputController, response: PaymentSheetResponse) {
         isModalPresented = false
         paymentSDK = nil
         onDismiss?()
 
         DispatchQueue.main.async { [weak self] in
-            self?.onSuccess?(instrument)
+            self?.onSuccess?(response)
         }
     }
 

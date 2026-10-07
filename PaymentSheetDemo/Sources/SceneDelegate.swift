@@ -5,12 +5,17 @@
 //  Created by Jack Tihon on 6/24/22.
 //
 
+import FinixPaymentSheet
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
+    func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        // Handle URL if app was launched via URL scheme
+        if let urlContext = connectionOptions.urlContexts.first {
+            handleURL(urlContext.url)
+        }
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
@@ -43,5 +48,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    // MARK: - URL Handling for 3DS
+
+    func scene(_: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        handleURL(url)
+    }
+
+    private func handleURL(_ url: URL) {
+        // Forward the URL to PaymentAction to handle 3DS redirects
+        if PaymentAction.handleThreeDSRedirect(url: url) {
+            print("3DS redirect handled: \(url)")
+        }
     }
 }
