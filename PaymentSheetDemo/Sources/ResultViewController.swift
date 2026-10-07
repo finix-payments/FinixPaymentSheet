@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum TokenizationResult {
-    case success(TokenResponse)
+    case success(TokenizedResponse)
     case error(Error)
 }
 
@@ -73,9 +73,9 @@ class ResultViewController: UIViewController {
             case let .error(error):
                 textView.text = error.localizedDescription
                 navigationItem.title = "Error"
-            case let .success(response):
-                textView.text = String(describing: response)
-                navigationItem.title = "Tokenize Response"
+            case .success:
+                // Use updateDisplay to include 3DS session ID if set
+                updateDisplay()
             case .none:
                 textView.text = nil
                 navigationItem.title = nil
@@ -83,9 +83,29 @@ class ResultViewController: UIViewController {
         }
     }
 
+    /// 3DS Session ID to display (set before or after result)
+    @objc var threeDSSessionId: String? {
+        didSet {
+            updateDisplay()
+        }
+    }
+
+    private func updateDisplay() {
+        guard case let .success(response) = result else { return }
+
+        var text = String(describing: response)
+        if let sessionId = threeDSSessionId {
+            text += "\n\n3DS Session ID: \(sessionId)"
+            navigationItem.title = "Token + 3DS"
+        } else {
+            navigationItem.title = "Tokenize Response"
+        }
+        textView.text = text
+    }
+
     // MARK: - Objective-C Compatibility
 
-    @objc func setResult(success instrument: TokenResponse) {
+    @objc func setResult(success instrument: TokenizedResponse) {
         result = .success(instrument)
     }
 
