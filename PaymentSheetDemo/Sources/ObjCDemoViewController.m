@@ -322,8 +322,16 @@ typedef NS_ENUM(NSInteger, ObjCDemoRow) {
     ResultViewController *resultController = [[ResultViewController alloc] init];
     [resultController setResultWithSuccess:instrument];
 
-    // Push result controller
-    [paymentController.navigationController pushViewController:resultController animated:YES];
+    // Check if presented modally - dismiss first then show result
+    if (paymentController.presentingViewController != nil) {
+        __weak typeof(self) weakSelf = self;
+        [self dismissViewControllerAnimated:YES completion:^{
+            [weakSelf.navigationController pushViewController:resultController animated:YES];
+        }];
+    } else {
+        // Push presentation - just push the result
+        [paymentController.navigationController pushViewController:resultController animated:YES];
+    }
 }
 
 - (void)didCancelWithPaymentController:(PaymentInputController *)paymentController {
@@ -339,8 +347,16 @@ typedef NS_ENUM(NSInteger, ObjCDemoRow) {
     ResultViewController *resultController = [[ResultViewController alloc] init];
     [resultController setResultWithError:error];
 
-    // Push result controller
-    [paymentController.navigationController pushViewController:resultController animated:YES];
+    // Check if presented modally - dismiss first then show result
+    if (paymentController.presentingViewController != nil) {
+        __weak typeof(self) weakSelf = self;
+        [self dismissViewControllerAnimated:YES completion:^{
+            [weakSelf.navigationController pushViewController:resultController animated:YES];
+        }];
+    } else {
+        // Push presentation - just push the result
+        [paymentController.navigationController pushViewController:resultController animated:YES];
+    }
 }
 
 @end
