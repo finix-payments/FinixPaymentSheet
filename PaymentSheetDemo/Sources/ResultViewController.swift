@@ -45,17 +45,16 @@ class ResultViewController: UIViewController {
             if navController.presentingViewController != nil {
                 // Modal presentation: dismiss the entire modal
                 navController.presentingViewController?.dismiss(animated: true)
-            } else {
-                // Navigation push: pop back to root (before PaymentInputController)
-                if let paymentControllerIndex = navController.viewControllers.firstIndex(where: { $0 is PaymentInputController }) {
-                    // Pop to the view controller before the PaymentInputController
-                    if paymentControllerIndex > 0 {
-                        navController.popToViewController(navController.viewControllers[paymentControllerIndex - 1], animated: true)
-                    } else {
-                        // PaymentInputController is the root, pop to it
-                        navController.popToRootViewController(animated: true)
-                    }
+            } else if let paymentControllerIndex = navController.viewControllers.firstIndex(where: { $0 is PaymentInputController }) {
+                // Navigation push with PaymentInputController in stack: pop to before it
+                if paymentControllerIndex > 0 {
+                    navController.popToViewController(navController.viewControllers[paymentControllerIndex - 1], animated: true)
+                } else {
+                    navController.popToRootViewController(animated: true)
                 }
+            } else {
+                // ResultViewController was pushed after modal dismiss - just pop back
+                navController.popViewController(animated: true)
             }
         }
     }

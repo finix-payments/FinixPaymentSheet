@@ -460,7 +460,15 @@ extension DemoViewController: PaymentActionDelegate {
             debugPrint("Token: \(response.tokenizedResponse.id)")
         }
 
-        paymentController.navigationController?.pushViewController(resultController, animated: true)
+        // Check if presented modally - dismiss first then show result
+        if paymentController.presentingViewController != nil {
+            dismiss(animated: true) { [weak self] in
+                self?.navigationController?.pushViewController(resultController, animated: true)
+            }
+        } else {
+            // Push presentation - just push the result
+            paymentController.navigationController?.pushViewController(resultController, animated: true)
+        }
     }
 
     func didCancel(paymentController _: PaymentInputController) {
@@ -476,7 +484,16 @@ extension DemoViewController: PaymentActionDelegate {
             debugPrint("FinixError: \(finixError.message), code: \(finixError.code)")
         }
         resultController.result = .error(error)
-        paymentController.navigationController?.pushViewController(resultController, animated: true)
+
+        // Check if presented modally - dismiss first then show result
+        if paymentController.presentingViewController != nil {
+            dismiss(animated: true) { [weak self] in
+                self?.navigationController?.pushViewController(resultController, animated: true)
+            }
+        } else {
+            // Push presentation - just push the result
+            paymentController.navigationController?.pushViewController(resultController, animated: true)
+        }
     }
 }
 
