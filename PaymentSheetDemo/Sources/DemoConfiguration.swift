@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Test Credentials
 
 /// Preset test credentials for internal testing
-/// These credentials are for the Finix QA/Sandbox environments only
+/// These credentials are for the Finix Sandbox environment only
 enum TestCredentials {
     // Sandbox - pre-configured with sample Application ID for basic tokenization
     // 3DS credentials must be configured separately via settings
