@@ -417,7 +417,7 @@
 			repositoryURL = "https://github.com/finix-payments/finix-paymentsheet-ios-sdk";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 1.0.12;
+				minimumVersion = 1.0.13;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

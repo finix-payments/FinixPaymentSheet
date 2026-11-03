@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/finix-payments/finix-paymentsheet-ios-sdk",
       "state" : {
-        "revision" : "01f1de47d1de22489096ae875f72cb768acec3e8",
-        "version" : "1.0.12"
+        "revision" : "639ac3a3f9d90f16a8aaf79ea34f84b7162cfce9",
+        "version" : "1.0.13"
       }
     },
     {
